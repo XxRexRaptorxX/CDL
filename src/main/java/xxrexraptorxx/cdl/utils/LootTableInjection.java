@@ -89,3 +89,6 @@ public class LootTableInjection {
         return Math.max(0, INJECTION_TABLES.size()-i); //Sponge loads the loot tables for all worlds at start. Which makes this test not work anyway.
     }
 }
+
+//                              TEST command
+//      /setblock ~ ~ ~ minecraft:chest{LootTable:"minecraft:chests/simple_dungeon"}
