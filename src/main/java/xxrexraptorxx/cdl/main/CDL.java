@@ -4,6 +4,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import xxrexraptorxx.cdl.utils.Config;
 
 /**
  * @author XxRexRaptorxX (RexRaptor)
@@ -12,9 +13,11 @@ import org.apache.logging.log4j.Logger;
 @Mod(References.MODID)
 public class CDL {
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
+
 
     public CDL() {
+        Config.init();
         MinecraftForge.EVENT_BUS.register(this);
     }
 
