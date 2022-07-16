@@ -5,7 +5,7 @@ issueTrackerURL="https://www.curseforge.com/minecraft/mc-mods/customized-dungeon
 
 [[mods]]
 modId="cdl"
-version="2.1.1"
+version="2.1.2"
 displayName="Customized Dungeon Loot"
 itemIcon="minecraft:chest"
 updateJSONURL="https://raw.githubusercontent.com/XxRexRaptorxX/Update-Checker/main/CDL.json"
@@ -20,7 +20,7 @@ description='''
 [[dependencies.cdl]]
     modId="forge"
     mandatory=true
-    versionRange="[41,)"
+    versionRange="[41.0.98,)"
     ordering="NONE"
     side="BOTH"
 
