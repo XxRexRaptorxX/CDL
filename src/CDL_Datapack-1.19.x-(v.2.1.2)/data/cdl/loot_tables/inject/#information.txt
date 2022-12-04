@@ -1,0 +1,3 @@
+The files in this folder will overwrite the default files from the CDL mod.
+
+Please remove all unedited .json files in this folder to make the whole thing clearer and not to disturb other datapacks.
