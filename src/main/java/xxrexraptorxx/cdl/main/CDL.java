@@ -1,10 +1,15 @@
 package xxrexraptorxx.cdl.main;
 
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 import xxrexraptorxx.cdl.utils.Config;
+import xxrexraptorxx.cdl.world.LootTableInjection;
 
 /**
  * @author XxRexRaptorxX (RexRaptor)
@@ -15,10 +20,18 @@ public class CDL {
 
     public static final Logger LOGGER = LogManager.getLogger();
 
-
     public CDL() {
+        IEventBus forgeBus = MinecraftForge.EVENT_BUS;
+        IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        modBus.addListener(this::setup);
+
         Config.init();
-        MinecraftForge.EVENT_BUS.register(this);
+    }
+
+
+    private void setup(final @NotNull FMLCommonSetupEvent event) {
+        MinecraftForge.EVENT_BUS.addListener(LootTableInjection::onChestLootLoad);
     }
 
 }
