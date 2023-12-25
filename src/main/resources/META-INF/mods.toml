@@ -13,12 +13,13 @@ displayURL="https://www.curseforge.com/minecraft/mc-mods/customized-dungeon-loot
 logoFile="logo.png"
 #credits=""
 authors="${mod_authors}"
-description='''Adds vanilla items with special abilities to the dungeon chests, like enchantments, custom names, attributes and more cool features!
-'''
+description='''Adds vanilla items with special abilities to the dungeon chests, like enchantments, custom names, attributes and more cool features!'''
 
+[[mixins]]
+config="mixins.${mod_id}.json"
 
 [[dependencies.${mod_id}]]
-modId="forge"
+modId="neoforge"
 mandatory=true
 versionRange="${forge_version_range}"
 ordering="NONE"
@@ -30,4 +31,5 @@ mandatory=true
 versionRange="${mc_version_range}"
 ordering="NONE"
 side="BOTH"
+
 
