@@ -8,7 +8,7 @@ modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
 itemIcon="minecraft:chest"
-updateJSONURL="https://raw.githubusercontent.com/XxRexRaptorxX/Update-Checker/main/CDL.json"
+updateJSONURL="https://raw.githubusercontent.com/XxRexRaptorxX/Update-Checker/main/CDL_NEO.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/customized-dungeon-loot"
 logoFile="logo.png"
 #credits=""
@@ -16,7 +16,7 @@ authors="${mod_authors}"
 description='''Adds vanilla items with special abilities to the dungeon chests, like enchantments, custom names, attributes and more cool features!'''
 
 [[mixins]]
-config="mixins.${mod_id}.json"
+config="${mod_id}.mixins.json"
 
 [[dependencies.${mod_id}]]
 modId="neoforge"
