@@ -1,0 +1,30 @@
+{
+  "type": "cdl:add_item",
+
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": [
+        "minecraft:chests/simple_dungeon",
+        "minecraft:chests/abandoned_mineshaft"
+        ]
+      },
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.1
+    }
+  ],
+
+
+  "item": "minecraft:player_head",
+  "count": 1,
+
+  "functions": [
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:custom_name": "Steve's Head"
+      }
+    }
+  ]
+}

@@ -15,9 +15,6 @@ logoFile="logo.png"
 authors="${mod_authors}"
 description='''Adds vanilla items with special abilities to the dungeon chests, like enchantments, custom names, attributes and more cool features!'''
 
-[[mixins]]
-config="${mod_id}.mixins.json"
-
 [[dependencies.${mod_id}]]
 modId="neoforge"
 mandatory=true

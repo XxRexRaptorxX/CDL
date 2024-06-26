@@ -1,6 +1,6 @@
 package xxrexraptorxx.cdl.utils;
 
-import net.neoforged.fml.ModLoadingContext;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
@@ -15,12 +15,12 @@ public class Config {
     public static ModConfigSpec.BooleanValue PATREON_REWARDS;
 
 
-    public static void init() {
+    public static void init(ModContainer container) {
         initCommon();
         initClient();
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, COMMON_CONFIG);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, CLIENT_CONFIG);
+        container.registerConfig(ModConfig.Type.SERVER, COMMON_CONFIG);
+        container.registerConfig(ModConfig.Type.CLIENT, CLIENT_CONFIG);
     }
 
 
