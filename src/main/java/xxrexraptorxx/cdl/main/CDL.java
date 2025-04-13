@@ -1,5 +1,6 @@
 package xxrexraptorxx.cdl.main;
 
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -10,7 +11,7 @@ import xxrexraptorxx.cdl.utils.Config;
 
 /**
  * @author XxRexRaptorxX (RexRaptor)
- * @projectPage https://www.curseforge.com/minecraft/mc-mods/customized-dungeon-loot
+ * @projectPage <a href="https://www.curseforge.com/minecraft/mc-mods/customized-dungeon-loot">...</a>
  **/
 @Mod(References.MODID)
 public class CDL {
@@ -23,5 +24,9 @@ public class CDL {
         Config.init(container);
     }
 
+
+    public static ResourceLocation location(String path) {
+        return ResourceLocation.fromNamespaceAndPath(References.MODID, path);
+    }
 
 }

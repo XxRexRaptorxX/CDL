@@ -6,18 +6,6 @@ plugins {
     id 'net.neoforged.gradle.userdev' version '7.0.145'
 }
 
-repositories {
-    //JEI
-    maven { url "https://maven.blamejared.com/" }
-    maven { url "https://modmaven.dev" }
-    //CURSEFORGE
-    maven { url "https://cursemaven.com" }
-
-    flatDir {
-        dir 'libs'
-    }
-}
-
 
 base {
     archivesName = mod_id
@@ -104,15 +92,52 @@ runs {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
-dependencies {
+repositories {
+    maven {
+        // location of the maven that hosts JEI files since January 2023
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+    }
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+    maven {
+        // location of the cursemaven
+        url 'https://www.cursemaven.com'
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
 
+dependencies {
     implementation "net.neoforged:neoforge:${forge_version}"
+
     //JEI
-    compileOnly("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
-    compileOnly("mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}")
-    runtimeOnly("mezz.jei:jei-${mc_version}-neoforge:${jei_version}")
+    compileOnly ("mezz.jei:jei-1.21.1-common-api:${jei_version}")
+    compileOnly ("mezz.jei:jei-1.21.1-neoforge-api:${jei_version}")
+    runtimeOnly ("mezz.jei:jei-1.21.1-neoforge:${jei_version}")
     //JADE
-    runtimeOnly("curse.maven:jade-324717:${jade_version}")
+    runtimeOnly ("curse.maven:jade-324717:${jade_version}")
+}
+
+
+
+// Example for how to get properties into the manifest for reading at runtime.
+jar {
+    manifest {
+        attributes([
+                "Specification-Title"     : mod_id,
+                "Specification-Vendor"    : mod_authors,
+                "Specification-Version"   : project.version,
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.jar.archiveVersion,
+                "Implementation-Vendor"   : mod_authors,
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
 }
 
 
@@ -136,9 +161,21 @@ archivesBaseName = "${mod_id}"
 version = "${mc_version}-${mod_version}"
 
 jar {
+    manifest {
+        attributes([
+                "Specification-Title"     : mod_id,
+                "Specification-Vendor"    : mod_authors,
+                "Specification-Version"   : project.version,
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.jar.archiveVersion,
+                "Implementation-Vendor"   : mod_authors,
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+
     archiveClassifier = ''
     archiveBaseName = "${mod_name}".replace(" ", "")
-    archiveVersion = "${mc_version}-(v.${mod_version})"
+    archiveVersion = "${mc_version}-(v.${mod_version}-NEO)"
 }
 
 
