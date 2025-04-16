@@ -1,6 +1,6 @@
 {
   "entries": [
-    "cdl:test"
+    "cdl:inject/chests/simple_dungeon"
   ],
   "replace": false
 }
