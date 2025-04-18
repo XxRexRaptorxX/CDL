@@ -1,12 +1,12 @@
-// 1.21	2025-04-18T18:14:58.2865593	Loot Tables
-dbc99c4c9197dc89950c05c4412f31170b1fe338 data/cdl/loot_table/inject/chests/abandoned_mineshaft.json
-8c3e2c75ef1553142a308f9df53a7abd01569e2f data/cdl/loot_table/inject/chests/bastion_other.json
-243edc768b77e45f26795a04bf1ad6078d63a723 data/cdl/loot_table/inject/chests/bastion_treasure.json
-769427e19859dc2235c0727d896903c8dd645664 data/cdl/loot_table/inject/chests/desert_pyramid.json
-ebb7edadb7b5522af4f46176aae3db70e96f8c8d data/cdl/loot_table/inject/chests/nether_bridge.json
-ad37557e49a53e97aefc0d21b11d5c4431b631df data/cdl/loot_table/inject/chests/pillager_outpost.json
-d456ec6d3d4d2f7137b12f92cfdad506642f7d55 data/cdl/loot_table/inject/chests/shipwreck_treasure.json
-5206d37531e3d28548192438e04f49ed456e6d20 data/cdl/loot_table/inject/chests/simple_dungeon.json
-71d6b41c9f7661d224cb560a2704144237135de7 data/cdl/loot_table/inject/chests/trial_chambers/reward_ominous.json
-76babda0c74ad96854e5374e2a642beb73f781e1 data/cdl/loot_table/inject/chests/trial_chambers/reward_rare.json
-ff33009a93c0a337d7b7e6ea83813982a8895f71 data/cdl/loot_table/inject/chests/woodland_mansion.json
+// 1.21	2025-04-18T18:32:03.5281317	Loot Tables
+33002ce2f2ee36d495c5f88919cfa4cc80a97ac8 data/cdl/loot_table/inject/chests/abandoned_mineshaft.json
+894785fddf04d99640b02969eb21c87b556ebfc0 data/cdl/loot_table/inject/chests/bastion_other.json
+2fe9d34e1f2e56e2dd59464fd2aaba5eba3c6c97 data/cdl/loot_table/inject/chests/bastion_treasure.json
+1da97903fa5e23147eb199baa2413afb9e65b5d8 data/cdl/loot_table/inject/chests/desert_pyramid.json
+a6ed7e7726aa5ca982bcb49d356f5efc3d724ef1 data/cdl/loot_table/inject/chests/nether_bridge.json
+87c6987b8eb076d42629b371a3b3c77589f41c9e data/cdl/loot_table/inject/chests/pillager_outpost.json
+9ca7313b468aca82d716ebb046b09c7c7786f2fe data/cdl/loot_table/inject/chests/shipwreck_treasure.json
+f5f3445832c707e0819de1e51f87bbd636e893a9 data/cdl/loot_table/inject/chests/simple_dungeon.json
+e262535e2fd002bc6617ee4d0766f328a36897b7 data/cdl/loot_table/inject/chests/trial_chambers/reward_ominous.json
+bc43e36baf8912c6591798efcac72c02426dfd85 data/cdl/loot_table/inject/chests/trial_chambers/reward_rare.json
+0511c2a126f9af192396f5d1b2cdbb1d18ef1a76 data/cdl/loot_table/inject/chests/woodland_mansion.json

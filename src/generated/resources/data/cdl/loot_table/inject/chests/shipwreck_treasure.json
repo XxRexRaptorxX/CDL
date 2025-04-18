@@ -5,7 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "chance": 0.08,
+          "chance": 0.05,
           "condition": "minecraft:random_chance"
         }
       ],
@@ -16,7 +16,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdldiving_boots"
+                "translate": "item.cdl.diving_boots"
               },
               "target": "item_name"
             },
@@ -52,7 +52,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdldiving_helmet"
+                "translate": "item.cdl.diving_helmet"
               },
               "target": "item_name"
             },
@@ -88,7 +88,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdlpro_fishing_rod"
+                "translate": "item.cdl.pro_fishing_rod"
               },
               "target": "item_name"
             },

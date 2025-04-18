@@ -5,7 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "chance": 0.08,
+          "chance": 0.05,
           "condition": "minecraft:random_chance"
         }
       ],
@@ -16,7 +16,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdlsniper_bow"
+                "translate": "item.cdl.sniper_bow"
               },
               "target": "item_name"
             },
@@ -56,7 +56,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdlimproved_crossbow"
+                "translate": "item.cdl.improved_crossbow"
               },
               "target": "item_name"
             },

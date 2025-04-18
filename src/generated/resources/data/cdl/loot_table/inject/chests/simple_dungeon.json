@@ -5,7 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "chance": 0.08,
+          "chance": 0.05,
           "condition": "minecraft:random_chance"
         }
       ],
@@ -18,7 +18,7 @@
               "name": "Grumm"
             }
           ],
-          "name": "minecraft:player_head"
+          "name": "minecraft:name_tag"
         },
         {
           "type": "minecraft:item",
@@ -26,7 +26,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdlreinforced_chestplate"
+                "translate": "item.cdl.reinforced_chestplate"
               },
               "target": "item_name"
             },

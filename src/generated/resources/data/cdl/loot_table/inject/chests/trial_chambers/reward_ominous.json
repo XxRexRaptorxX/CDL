@@ -5,7 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "chance": 0.08,
+          "chance": 0.05,
           "condition": "minecraft:random_chance"
         }
       ],
@@ -16,7 +16,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdlcharged_breeze_rod"
+                "translate": "item.cdl.charged_breeze_rod"
               },
               "target": "item_name"
             },

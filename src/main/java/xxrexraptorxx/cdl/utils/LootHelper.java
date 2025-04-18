@@ -13,22 +13,22 @@ import xxrexraptorxx.cdl.main.References;
 public class LootHelper {
 
     public static LootItemFunction.Builder setItemName(String name) {
-        return SetNameFunction.setName(Component.translatable("item." + References.MODID + name), SetNameFunction.Target.ITEM_NAME);
+        return SetNameFunction.setName(Component.translatable("item." + References.MODID + "." + name), SetNameFunction.Target.ITEM_NAME);
     }
 
 
     public static LootItemFunction.Builder setItemName(String name, ChatFormatting formatting) {
-        return SetNameFunction.setName(Component.translatable("item." + References.MODID + name).withStyle(formatting), SetNameFunction.Target.ITEM_NAME);
+        return SetNameFunction.setName(Component.translatable("item." + References.MODID + "." + name).withStyle(formatting), SetNameFunction.Target.ITEM_NAME);
     }
 
 
     public static LootItemFunction.Builder setLore(String name) {
-        return new SetLoreFunction.Builder().addLine(Component.translatable("lore." + References.MODID + name));
+        return new SetLoreFunction.Builder().addLine(Component.translatable("lore." + References.MODID + "." + name));
     }
 
 
     public static LootItemFunction.Builder setLore(String name, ChatFormatting formatting) {
-        return new SetLoreFunction.Builder().addLine(Component.translatable("lore." + References.MODID + name).withStyle(formatting));
+        return new SetLoreFunction.Builder().addLine(Component.translatable("lore." + References.MODID + "." + name).withStyle(formatting));
     }
 
 

@@ -44,7 +44,7 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
     private void addLoot() {
         HolderLookup.RegistryLookup<Enchantment> lookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
 
-        builder(BuiltInLootTables.ABANDONED_MINESHAFT, 0.08).getLootPool()
+        builder(BuiltInLootTables.ABANDONED_MINESHAFT, 0.05).getLootPool()
                 .add(item(Items.DIAMOND)
                     .apply(LootHelper.setItemName("blood_diamond", ChatFormatting.RED))
                     .apply(LootHelper.setEnchantment(Enchantments.VANISHING_CURSE, lookup))
@@ -62,7 +62,7 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 );
 
 
-        builder(BuiltInLootTables.DESERT_PYRAMID, 0.08).getLootPool()
+        builder(BuiltInLootTables.DESERT_PYRAMID, 0.05).getLootPool()
                 .add(item(Items.PLAYER_HEAD)
                     .apply(LootHelper.setItemName("steves_head"))
                 )
@@ -73,8 +73,8 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
 
 
 
-        builder(BuiltInLootTables.SIMPLE_DUNGEON, 0.08).getLootPool()
-                .add(item(Items.PLAYER_HEAD)
+        builder(BuiltInLootTables.SIMPLE_DUNGEON, 0.05).getLootPool()
+                .add(item(Items.NAME_TAG)
                         .apply(SetNameFunction.setName(Component.literal("Grumm"), SetNameFunction.Target.CUSTOM_NAME))
                 )
                 .add(item(Items.IRON_CHESTPLATE)
@@ -85,7 +85,7 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 );
 
 
-        builder(BuiltInLootTables.SHIPWRECK_TREASURE, 0.08).getLootPool()
+        builder(BuiltInLootTables.SHIPWRECK_TREASURE, 0.05).getLootPool()
                 .add(item(Items.IRON_BOOTS)
                     .apply(LootHelper.setItemName("diving_boots"))
                     .apply(LootHelper.setEnchantment(Enchantments.DEPTH_STRIDER, lookup))
@@ -107,7 +107,7 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 );
 
 
-        builder(BuiltInLootTables.PILLAGER_OUTPOST, 0.08).getLootPool()
+        builder(BuiltInLootTables.PILLAGER_OUTPOST, 0.05).getLootPool()
                 .add(item(Items.BOW)
                     .apply(LootHelper.setItemName("sniper_bow"))
                     .apply(LootHelper.setEnchantment(Enchantments.PUNCH, 3, lookup))
@@ -123,7 +123,7 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 );
 
 
-        builder(BuiltInLootTables.BASTION_OTHER, 0.08).getLootPool()
+        builder(BuiltInLootTables.BASTION_OTHER, 0.05).getLootPool()
                 .add(item(Items.FLINT_AND_STEEL)
                         .apply(LootHelper.setItemName("infinite_fire", ChatFormatting.RED))
                         .apply(LootHelper.setEnchantment(Enchantments.UNBREAKING, 3, 5, lookup))
@@ -132,7 +132,7 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 );
 
 
-        builder(BuiltInLootTables.BASTION_TREASURE, 0.08).getLootPool()
+        builder(BuiltInLootTables.BASTION_TREASURE, 0.05).getLootPool()
                 .add(item(Items.GOLDEN_SWORD)
                         .apply(LootHelper.setItemName("thiefs_sword"))
                         .apply(LootHelper.setEnchantment(Enchantments.LOOTING, 3, lookup))
@@ -140,15 +140,15 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 );
 
 
-        builder(BuiltInLootTables.WOODLAND_MANSION, 0.08).getLootPool()
+        builder(BuiltInLootTables.WOODLAND_MANSION, 0.05).getLootPool()
                 .add(item(Items.CARVED_PUMPKIN)
-                        .apply(LootHelper.setItemName("evil_pumpkin", ChatFormatting.RED))
+                        .apply(LootHelper.setItemName("evil_pumpkin", ChatFormatting.DARK_RED))
                         .apply(LootHelper.setLore("evil_pumpkin", ChatFormatting.GRAY))
                         .apply(LootHelper.setEnchantment(Enchantments.BINDING_CURSE, lookup))
                 );
 
 
-        builder(BuiltInLootTables.TRIAL_CHAMBERS_REWARD_RARE, 0.08).getLootPool()
+        builder(BuiltInLootTables.TRIAL_CHAMBERS_REWARD_RARE, 0.05).getLootPool()
                 .add(item(Items.BREEZE_ROD)
                         .apply(LootHelper.setItemName("charged_breeze_rod"))
                         .apply(LootHelper.setEnchantment(Enchantments.KNOCKBACK, 10, lookup))
@@ -162,7 +162,7 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 );
 
 
-        builder(BuiltInLootTables.TRIAL_CHAMBERS_REWARD_OMINOUS, 0.08).getLootPool()
+        builder(BuiltInLootTables.TRIAL_CHAMBERS_REWARD_OMINOUS, 0.05).getLootPool()
                 .add(item(Items.BREEZE_ROD)
                         .apply(LootHelper.setItemName("charged_breeze_rod"))
                         .apply(LootHelper.setEnchantment(Enchantments.KNOCKBACK, 10, lookup))
@@ -170,7 +170,7 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 );
 
 
-        builder(BuiltInLootTables.NETHER_BRIDGE, 0.08).getLootPool()
+        builder(BuiltInLootTables.NETHER_BRIDGE, 0.05).getLootPool()
                 .add(item(Items.BLAZE_ROD)
                         .apply(LootHelper.setItemName("charged_blaze_rod"))
                         .apply(LootHelper.setEnchantment(Enchantments.FIRE_ASPECT, 10, lookup))

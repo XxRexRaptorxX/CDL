@@ -5,7 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "chance": 0.08,
+          "chance": 0.05,
           "condition": "minecraft:random_chance"
         }
       ],
@@ -16,7 +16,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdlsteves_head"
+                "translate": "item.cdl.steves_head"
               },
               "target": "item_name"
             }
@@ -29,7 +29,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdlroyal_horse_armor"
+                "translate": "item.cdl.royal_horse_armor"
               },
               "target": "item_name"
             },

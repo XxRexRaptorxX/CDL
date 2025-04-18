@@ -5,7 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "chance": 0.08,
+          "chance": 0.05,
           "condition": "minecraft:random_chance"
         }
       ],
@@ -16,8 +16,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "color": "red",
-                "translate": "item.cdlevil_pumpkin"
+                "color": "dark_red",
+                "translate": "item.cdl.evil_pumpkin"
               },
               "target": "item_name"
             },
@@ -26,7 +26,7 @@
               "lore": [
                 {
                   "color": "gray",
-                  "translate": "lore.cdlevil_pumpkin"
+                  "translate": "lore.cdl.evil_pumpkin"
                 }
               ],
               "mode": "append"

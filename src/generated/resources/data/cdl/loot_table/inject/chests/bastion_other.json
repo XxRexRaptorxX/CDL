@@ -5,7 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "chance": 0.08,
+          "chance": 0.05,
           "condition": "minecraft:random_chance"
         }
       ],
@@ -17,7 +17,7 @@
               "function": "minecraft:set_name",
               "name": {
                 "color": "red",
-                "translate": "item.cdlinfinite_fire"
+                "translate": "item.cdl.infinite_fire"
               },
               "target": "item_name"
             },
