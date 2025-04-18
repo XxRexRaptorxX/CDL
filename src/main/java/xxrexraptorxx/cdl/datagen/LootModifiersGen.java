@@ -1,24 +1,28 @@
 package xxrexraptorxx.cdl.datagen;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
-import net.minecraft.world.level.storage.loot.functions.SetStewEffectFunction;
+import net.minecraft.world.level.storage.loot.functions.SetEnchantmentsFunction;
+import net.minecraft.world.level.storage.loot.functions.SetNameFunction;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
-import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.neoforged.neoforge.common.data.GlobalLootModifierProvider;
 import net.neoforged.neoforge.common.loot.LootTableIdCondition;
 import xxrexraptorxx.cdl.main.References;
@@ -37,16 +41,19 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
         super(packOutput, registries, References.MODID);
     }
 
+
     private void addLoot() {
-        builder(BuiltInLootTables.SIMPLE_DUNGEON, 0.5).getLootPool().add(
-                item(Items.SUSPICIOUS_STEW).apply(SetStewEffectFunction.stewEffect()
-                        .withEffect(MobEffects.NIGHT_VISION, UniformGenerator.between(7, 10))
-                        .withEffect(MobEffects.JUMP, UniformGenerator.between(7, 10))
-                        .withEffect(MobEffects.WEAKNESS, UniformGenerator.between(6, 8))
-                        .withEffect(MobEffects.BLINDNESS, UniformGenerator.between(5, 7))
-                        .withEffect(MobEffects.POISON, UniformGenerator.between(10, 20))
-                        .withEffect(MobEffects.SATURATION, UniformGenerator.between(7, 10))
-                )
+        HolderLookup.RegistryLookup<Enchantment> lookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+
+        builder(BuiltInLootTables.ABANDONED_MINESHAFT, 0.1).getLootPool()
+            .add(item(Items.DIAMOND)
+                    .apply(SetNameFunction.setName(Component.translatable("item." + References.MODID + ".blood_diamond").withStyle(ChatFormatting.RED), SetNameFunction.Target.ITEM_NAME))
+                    .apply(new SetEnchantmentsFunction.Builder(false).withEnchantment(lookup.getOrThrow(Enchantments.VANISHING_CURSE), ConstantValue.exactly(0)))
+            )
+            .add(item(Items.EMERALD)
+                    .apply(SetNameFunction.setName(Component.translatable("item." + References.MODID + ".blood_emerald").withStyle(ChatFormatting.RED), SetNameFunction.Target.ITEM_NAME))
+                    .apply(new SetEnchantmentsFunction.Builder(false).withEnchantment(lookup.getOrThrow(Enchantments.VANISHING_CURSE), ConstantValue.exactly(0))
+            )
         );
     }
 

@@ -1,6 +1,6 @@
 {
   "entries": [
-    "cdl:inject/chests/simple_dungeon"
+    "cdl:inject/chests/abandoned_mineshaft"
   ],
   "replace": false
 }

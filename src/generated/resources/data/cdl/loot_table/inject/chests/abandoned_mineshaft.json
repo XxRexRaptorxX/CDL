@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "chance": 0.5,
+          "condition": "minecraft:random_chance"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "color": "red",
+                "translate": "item.cdl.blood_diamond"
+              },
+              "target": "item_name"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:vanishing_curse": 0.0
+              },
+              "function": "minecraft:set_enchantments"
+            }
+          ],
+          "name": "minecraft:diamond"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "color": "red",
+                "translate": "item.cdl.blood_emerald"
+              },
+              "target": "item_name"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:vanishing_curse": 0.0
+              },
+              "function": "minecraft:set_enchantments"
+            }
+          ],
+          "name": "minecraft:emerald"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "cdl:inject/chests/abandoned_mineshaft"
+}

@@ -15,7 +15,7 @@ public class ModLootModifiers {
     public static void init(IEventBus eventBus) { LOOT_MODIFIER_SERIALIZERS.register(eventBus); }
 
 
-    public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<ChestLootModifier>> ADD_ITEM = LOOT_MODIFIER_SERIALIZERS.register("add_item", ChestLootModifier.CODEC);
+    public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<ChestLootModifier>> LOOT_GEN = LOOT_MODIFIER_SERIALIZERS.register("special_loot_gen", ChestLootModifier.CODEC);
 
 
     public static void register(IEventBus eventBus) {
