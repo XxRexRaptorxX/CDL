@@ -1,0 +1,10 @@
+{
+  "type": "cdl:special_loot_gen",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:chests/desert_pyramid"
+    }
+  ],
+  "loot_table": "cdl:inject/chests/desert_pyramid"
+}

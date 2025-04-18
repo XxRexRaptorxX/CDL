@@ -16,17 +16,16 @@ import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
-import net.minecraft.world.level.storage.loot.functions.SetEnchantmentsFunction;
 import net.minecraft.world.level.storage.loot.functions.SetNameFunction;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.neoforged.neoforge.common.data.GlobalLootModifierProvider;
 import net.neoforged.neoforge.common.loot.LootTableIdCondition;
 import xxrexraptorxx.cdl.main.References;
 import xxrexraptorxx.cdl.utils.ChestLootModifier;
+import xxrexraptorxx.cdl.utils.LootHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,16 +44,137 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
     private void addLoot() {
         HolderLookup.RegistryLookup<Enchantment> lookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
 
-        builder(BuiltInLootTables.ABANDONED_MINESHAFT, 0.1).getLootPool()
-            .add(item(Items.DIAMOND)
-                    .apply(SetNameFunction.setName(Component.translatable("item." + References.MODID + ".blood_diamond").withStyle(ChatFormatting.RED), SetNameFunction.Target.ITEM_NAME))
-                    .apply(new SetEnchantmentsFunction.Builder(false).withEnchantment(lookup.getOrThrow(Enchantments.VANISHING_CURSE), ConstantValue.exactly(0)))
-            )
-            .add(item(Items.EMERALD)
-                    .apply(SetNameFunction.setName(Component.translatable("item." + References.MODID + ".blood_emerald").withStyle(ChatFormatting.RED), SetNameFunction.Target.ITEM_NAME))
-                    .apply(new SetEnchantmentsFunction.Builder(false).withEnchantment(lookup.getOrThrow(Enchantments.VANISHING_CURSE), ConstantValue.exactly(0))
-            )
-        );
+        builder(BuiltInLootTables.ABANDONED_MINESHAFT, 0.08).getLootPool()
+                .add(item(Items.DIAMOND)
+                    .apply(LootHelper.setItemName("blood_diamond", ChatFormatting.RED))
+                    .apply(LootHelper.setEnchantment(Enchantments.VANISHING_CURSE, lookup))
+                )
+                .add(item(Items.EMERALD)
+                    .apply(LootHelper.setItemName("blood_emerald", ChatFormatting.RED))
+                    .apply(LootHelper.setEnchantment(Enchantments.VANISHING_CURSE, lookup))
+                )
+                .add(item(Items.DIAMOND_PICKAXE)
+                        .apply(LootHelper.setItemName("miners_pickaxe"))
+                        .apply(LootHelper.setEnchantment(Enchantments.MENDING, 0, 1, lookup))
+                        .apply(LootHelper.setEnchantment(Enchantments.FORTUNE, 2, 3, lookup))
+                        .apply(LootHelper.setEnchantment(Enchantments.EFFICIENCY, 2, 5, lookup))
+                        .apply(LootHelper.setDamage())
+                );
+
+
+        builder(BuiltInLootTables.DESERT_PYRAMID, 0.08).getLootPool()
+                .add(item(Items.PLAYER_HEAD)
+                    .apply(LootHelper.setItemName("steves_head"))
+                )
+                .add(item(Items.GOLDEN_HORSE_ARMOR)
+                .apply(LootHelper.setItemName("royal_horse_armor"))
+                .apply(LootHelper.setEnchantment(Enchantments.PROTECTION, 3, 4, lookup))
+                );
+
+
+
+        builder(BuiltInLootTables.SIMPLE_DUNGEON, 0.08).getLootPool()
+                .add(item(Items.PLAYER_HEAD)
+                        .apply(SetNameFunction.setName(Component.literal("Grumm"), SetNameFunction.Target.CUSTOM_NAME))
+                )
+                .add(item(Items.IRON_CHESTPLATE)
+                        .apply(LootHelper.setItemName("reinforced_chestplate"))
+                        .apply(LootHelper.setEnchantment(Enchantments.PROTECTION, 3, 4, lookup))
+                        .apply(LootHelper.setEnchantment(Enchantments.UNBREAKING, 1, 3, lookup))
+                        .apply(LootHelper.setDamage())
+                );
+
+
+        builder(BuiltInLootTables.SHIPWRECK_TREASURE, 0.08).getLootPool()
+                .add(item(Items.IRON_BOOTS)
+                    .apply(LootHelper.setItemName("diving_boots"))
+                    .apply(LootHelper.setEnchantment(Enchantments.DEPTH_STRIDER, lookup))
+                    .apply(LootHelper.setEnchantment(Enchantments.AQUA_AFFINITY, 1, lookup))
+                    .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.IRON_HELMET)
+                        .apply(LootHelper.setItemName("diving_helmet"))
+                        .apply(LootHelper.setEnchantment(Enchantments.RESPIRATION, 3, lookup))
+                        .apply(LootHelper.setEnchantment(Enchantments.AQUA_AFFINITY, 1, lookup))
+                        .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.FISHING_ROD)
+                        .apply(LootHelper.setItemName("pro_fishing_rod"))
+                        .apply(LootHelper.setEnchantment(Enchantments.UNBREAKING, 1, 3, lookup))
+                        .apply(LootHelper.setEnchantment(Enchantments.LUCK_OF_THE_SEA, 3, lookup))
+                        .apply(LootHelper.setEnchantment(Enchantments.LURE, 1, 3, lookup))
+                        .apply(LootHelper.setDamage())
+                );
+
+
+        builder(BuiltInLootTables.PILLAGER_OUTPOST, 0.08).getLootPool()
+                .add(item(Items.BOW)
+                    .apply(LootHelper.setItemName("sniper_bow"))
+                    .apply(LootHelper.setEnchantment(Enchantments.PUNCH, 3, lookup))
+                    .apply(LootHelper.setEnchantment(Enchantments.POWER, 3, 5, lookup))
+                    .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.CROSSBOW)
+                    .apply(LootHelper.setItemName("improved_crossbow"))
+                    .apply(LootHelper.setEnchantment(Enchantments.PIERCING, 1, 3, lookup))
+                    .apply(LootHelper.setEnchantment(Enchantments.UNBREAKING, 1, 3, lookup))
+                    .apply(LootHelper.setEnchantment(Enchantments.QUICK_CHARGE, 1, lookup))
+                    .apply(LootHelper.setDamage())
+                );
+
+
+        builder(BuiltInLootTables.BASTION_OTHER, 0.08).getLootPool()
+                .add(item(Items.FLINT_AND_STEEL)
+                        .apply(LootHelper.setItemName("infinite_fire", ChatFormatting.RED))
+                        .apply(LootHelper.setEnchantment(Enchantments.UNBREAKING, 3, 5, lookup))
+                        .apply(LootHelper.setEnchantment(Enchantments.FIRE_ASPECT, 2, 5, lookup))
+                        .apply(LootHelper.setEnchantment(Enchantments.MENDING, 0, 1, lookup))
+                );
+
+
+        builder(BuiltInLootTables.BASTION_TREASURE, 0.08).getLootPool()
+                .add(item(Items.GOLDEN_SWORD)
+                        .apply(LootHelper.setItemName("thiefs_sword"))
+                        .apply(LootHelper.setEnchantment(Enchantments.LOOTING, 3, lookup))
+                        .apply(LootHelper.setDamage())
+                );
+
+
+        builder(BuiltInLootTables.WOODLAND_MANSION, 0.08).getLootPool()
+                .add(item(Items.CARVED_PUMPKIN)
+                        .apply(LootHelper.setItemName("evil_pumpkin", ChatFormatting.RED))
+                        .apply(LootHelper.setLore("evil_pumpkin", ChatFormatting.GRAY))
+                        .apply(LootHelper.setEnchantment(Enchantments.BINDING_CURSE, lookup))
+                );
+
+
+        builder(BuiltInLootTables.TRIAL_CHAMBERS_REWARD_RARE, 0.08).getLootPool()
+                .add(item(Items.BREEZE_ROD)
+                        .apply(LootHelper.setItemName("charged_breeze_rod"))
+                        .apply(LootHelper.setEnchantment(Enchantments.KNOCKBACK, 10, lookup))
+                        .apply(LootHelper.setEnchantment(Enchantments.WIND_BURST, 1, 3, lookup))
+                )
+                .add(item(Items.IRON_AXE)
+                        .apply(LootHelper.setItemName("hammer"))
+                        .apply(LootHelper.setEnchantment(Enchantments.KNOCKBACK, 3, lookup))
+                        .apply(LootHelper.setEnchantment(Enchantments.BREACH, 1, 3, lookup))
+                        .apply(LootHelper.setDamage())
+                );
+
+
+        builder(BuiltInLootTables.TRIAL_CHAMBERS_REWARD_OMINOUS, 0.08).getLootPool()
+                .add(item(Items.BREEZE_ROD)
+                        .apply(LootHelper.setItemName("charged_breeze_rod"))
+                        .apply(LootHelper.setEnchantment(Enchantments.KNOCKBACK, 10, lookup))
+                        .apply(LootHelper.setEnchantment(Enchantments.WIND_BURST, 1, 3, lookup))
+                );
+
+
+        builder(BuiltInLootTables.NETHER_BRIDGE, 0.08).getLootPool()
+                .add(item(Items.BLAZE_ROD)
+                        .apply(LootHelper.setItemName("charged_blaze_rod"))
+                        .apply(LootHelper.setEnchantment(Enchantments.FIRE_ASPECT, 10, lookup))
+                );
     }
 
 

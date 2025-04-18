@@ -1,4 +1,22 @@
 {
   "item.cdl.blood_diamond": "Blutdiamant",
-  "item.cdl.blood_emerald": "Blutsmaragd"
+  "item.cdl.blood_emerald": "Blutsmaragd",
+  "item.cdl.steves_head": "Steve's Kopf",
+  "item.cdl.diving_boots": "Taucherstiefel",
+  "item.cdl.diving_helmet": "Taucherhelm",
+  "item.cdl.sniper_bow": "Sniper Bogen",
+  "item.cdl.improved_crossbow": "Verbesserte Armbrust",
+  "item.cdl.pro_fishing_rod": "Profi Angel",
+  "item.cdl.infinite_fire": "Höllenfeuerstein und Stahl",
+  "item.cdl.miners_pickaxe": "Bergmann's Spitzhacke",
+  "item.cdl.evil_pumpkin": "Böser Kürbis",
+  "item.cdl.charged_breeze_rod": "Geladene Böenrute",
+  "item.cdl.charged_blaze_rod": "Geladene Lohenrute",
+  "item.cdl.hammer": "Hammer",
+  "item.cdl.thiefs_sword": "Thief's Sword",
+  "item.cdl.royal_horse_armor": "Königliche Pferderüstung",
+  "item.cdl.reinforced_chestplate": "Verstärkter Harnisch",
+
+  "lore.cdl.evil_pumpkin": "Sieht gruselig aus..."
+
 }

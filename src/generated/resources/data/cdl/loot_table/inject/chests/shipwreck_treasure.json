@@ -16,20 +16,35 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "color": "red",
-                "translate": "item.cdlblood_diamond"
+                "translate": "item.cdldiving_boots"
               },
               "target": "item_name"
             },
             {
               "add": false,
               "enchantments": {
-                "minecraft:vanishing_curse": 1.0
+                "minecraft:depth_strider": 1.0
               },
               "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:aqua_affinity": 1.0
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.7,
+                "min": 0.2
+              },
+              "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:diamond"
+          "name": "minecraft:iron_boots"
         },
         {
           "type": "minecraft:item",
@@ -37,20 +52,35 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "color": "red",
-                "translate": "item.cdlblood_emerald"
+                "translate": "item.cdldiving_helmet"
               },
               "target": "item_name"
             },
             {
               "add": false,
               "enchantments": {
-                "minecraft:vanishing_curse": 1.0
+                "minecraft:respiration": 3.0
               },
               "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:aqua_affinity": 1.0
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.7,
+                "min": 0.2
+              },
+              "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:emerald"
+          "name": "minecraft:iron_helmet"
         },
         {
           "type": "minecraft:item",
@@ -58,28 +88,17 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdlminers_pickaxe"
+                "translate": "item.cdlpro_fishing_rod"
               },
               "target": "item_name"
             },
             {
               "add": false,
               "enchantments": {
-                "minecraft:mending": {
-                  "type": "minecraft:uniform",
-                  "max": 1.0,
-                  "min": 0.0
-                }
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:fortune": {
+                "minecraft:unbreaking": {
                   "type": "minecraft:uniform",
                   "max": 3.0,
-                  "min": 2.0
+                  "min": 1.0
                 }
               },
               "function": "minecraft:set_enchantments"
@@ -87,10 +106,17 @@
             {
               "add": false,
               "enchantments": {
-                "minecraft:efficiency": {
+                "minecraft:luck_of_the_sea": 3.0
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:lure": {
                   "type": "minecraft:uniform",
-                  "max": 5.0,
-                  "min": 2.0
+                  "max": 3.0,
+                  "min": 1.0
                 }
               },
               "function": "minecraft:set_enchantments"
@@ -105,11 +131,11 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:diamond_pickaxe"
+          "name": "minecraft:fishing_rod"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "cdl:inject/chests/abandoned_mineshaft"
+  "random_sequence": "cdl:inject/chests/shipwreck_treasure"
 }

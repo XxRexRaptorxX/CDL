@@ -1,2 +1,12 @@
-// 1.21	2025-04-18T16:07:32.9291307	Loot Tables
-5dbff067dab1c8b54ab2802e96656cb73c2c1b4f data/cdl/loot_table/inject/chests/abandoned_mineshaft.json
+// 1.21	2025-04-18T18:14:58.2865593	Loot Tables
+dbc99c4c9197dc89950c05c4412f31170b1fe338 data/cdl/loot_table/inject/chests/abandoned_mineshaft.json
+8c3e2c75ef1553142a308f9df53a7abd01569e2f data/cdl/loot_table/inject/chests/bastion_other.json
+243edc768b77e45f26795a04bf1ad6078d63a723 data/cdl/loot_table/inject/chests/bastion_treasure.json
+769427e19859dc2235c0727d896903c8dd645664 data/cdl/loot_table/inject/chests/desert_pyramid.json
+ebb7edadb7b5522af4f46176aae3db70e96f8c8d data/cdl/loot_table/inject/chests/nether_bridge.json
+ad37557e49a53e97aefc0d21b11d5c4431b631df data/cdl/loot_table/inject/chests/pillager_outpost.json
+d456ec6d3d4d2f7137b12f92cfdad506642f7d55 data/cdl/loot_table/inject/chests/shipwreck_treasure.json
+5206d37531e3d28548192438e04f49ed456e6d20 data/cdl/loot_table/inject/chests/simple_dungeon.json
+71d6b41c9f7661d224cb560a2704144237135de7 data/cdl/loot_table/inject/chests/trial_chambers/reward_ominous.json
+76babda0c74ad96854e5374e2a642beb73f781e1 data/cdl/loot_table/inject/chests/trial_chambers/reward_rare.json
+ff33009a93c0a337d7b7e6ea83813982a8895f71 data/cdl/loot_table/inject/chests/woodland_mansion.json

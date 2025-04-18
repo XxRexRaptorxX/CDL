@@ -16,81 +16,24 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "color": "red",
-                "translate": "item.cdlblood_diamond"
+                "translate": "item.cdlsniper_bow"
               },
               "target": "item_name"
             },
             {
               "add": false,
               "enchantments": {
-                "minecraft:vanishing_curse": 1.0
-              },
-              "function": "minecraft:set_enchantments"
-            }
-          ],
-          "name": "minecraft:diamond"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "color": "red",
-                "translate": "item.cdlblood_emerald"
-              },
-              "target": "item_name"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:vanishing_curse": 1.0
-              },
-              "function": "minecraft:set_enchantments"
-            }
-          ],
-          "name": "minecraft:emerald"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "translate": "item.cdlminers_pickaxe"
-              },
-              "target": "item_name"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:mending": {
-                  "type": "minecraft:uniform",
-                  "max": 1.0,
-                  "min": 0.0
-                }
+                "minecraft:punch": 3.0
               },
               "function": "minecraft:set_enchantments"
             },
             {
               "add": false,
               "enchantments": {
-                "minecraft:fortune": {
-                  "type": "minecraft:uniform",
-                  "max": 3.0,
-                  "min": 2.0
-                }
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:efficiency": {
+                "minecraft:power": {
                   "type": "minecraft:uniform",
                   "max": 5.0,
-                  "min": 2.0
+                  "min": 3.0
                 }
               },
               "function": "minecraft:set_enchantments"
@@ -105,11 +48,62 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:diamond_pickaxe"
+          "name": "minecraft:bow"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdlimproved_crossbow"
+              },
+              "target": "item_name"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:piercing": {
+                  "type": "minecraft:uniform",
+                  "max": 3.0,
+                  "min": 1.0
+                }
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:unbreaking": {
+                  "type": "minecraft:uniform",
+                  "max": 3.0,
+                  "min": 1.0
+                }
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:quick_charge": 1.0
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.7,
+                "min": 0.2
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "minecraft:crossbow"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "cdl:inject/chests/abandoned_mineshaft"
+  "random_sequence": "cdl:inject/chests/pillager_outpost"
 }

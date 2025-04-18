@@ -1,5 +1,22 @@
 {
   "item.cdl.blood_diamond": "Blood Diamond",
-  "item.cdl.blood_emerald": "Blood Emerald"
+  "item.cdl.blood_emerald": "Blood Emerald",
+  "item.cdl.steves_head": "Steve's Head",
+  "item.cdl.diving_boots": "Diving Boots",
+  "item.cdl.diving_helmet": "Diving Helmet",
+  "item.cdl.sniper_bow": "Sniper Bow",
+  "item.cdl.improved_crossbow": "Improved Crossbow",
+  "item.cdl.pro_fishing_rod": "Pro Fishing Rod",
+  "item.cdl.infinite_fire": "Hellfirestone and Steel",
+  "item.cdl.miners_pickaxe": "Miner's Pickaxe",
+  "item.cdl.evil_pumpkin": "Evil Pumpkin",
+  "item.cdl.charged_breeze_rod": "Charged Breeze Rod",
+  "item.cdl.charged_blaze_rod": "Charged Blaze Rod",
+  "item.cdl.hammer": "Hammer",
+  "item.cdl.thiefs_sword": "Thief's Sword",
+  "item.cdl.royal_horse_armor": "Royal Horse Armor",
+  "item.cdl.reinforced_chestplate": "Reinforced Chestplate",
 
+
+  "lore.cdl.evil_pumpkin": "Looks creepy..."
 }

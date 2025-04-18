@@ -16,81 +16,55 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "color": "red",
-                "translate": "item.cdlblood_diamond"
+                "translate": "item.cdlcharged_breeze_rod"
               },
               "target": "item_name"
             },
             {
               "add": false,
               "enchantments": {
-                "minecraft:vanishing_curse": 1.0
-              },
-              "function": "minecraft:set_enchantments"
-            }
-          ],
-          "name": "minecraft:diamond"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "color": "red",
-                "translate": "item.cdlblood_emerald"
-              },
-              "target": "item_name"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:vanishing_curse": 1.0
-              },
-              "function": "minecraft:set_enchantments"
-            }
-          ],
-          "name": "minecraft:emerald"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "translate": "item.cdlminers_pickaxe"
-              },
-              "target": "item_name"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:mending": {
-                  "type": "minecraft:uniform",
-                  "max": 1.0,
-                  "min": 0.0
-                }
+                "minecraft:knockback": 10.0
               },
               "function": "minecraft:set_enchantments"
             },
             {
               "add": false,
               "enchantments": {
-                "minecraft:fortune": {
+                "minecraft:wind_burst": {
                   "type": "minecraft:uniform",
                   "max": 3.0,
-                  "min": 2.0
+                  "min": 1.0
                 }
+              },
+              "function": "minecraft:set_enchantments"
+            }
+          ],
+          "name": "minecraft:breeze_rod"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdlhammer"
+              },
+              "target": "item_name"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:knockback": 3.0
               },
               "function": "minecraft:set_enchantments"
             },
             {
               "add": false,
               "enchantments": {
-                "minecraft:efficiency": {
+                "minecraft:breach": {
                   "type": "minecraft:uniform",
-                  "max": 5.0,
-                  "min": 2.0
+                  "max": 3.0,
+                  "min": 1.0
                 }
               },
               "function": "minecraft:set_enchantments"
@@ -105,11 +79,11 @@
               "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:diamond_pickaxe"
+          "name": "minecraft:iron_axe"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "cdl:inject/chests/abandoned_mineshaft"
+  "random_sequence": "cdl:inject/chests/trial_chambers/reward_rare"
 }
