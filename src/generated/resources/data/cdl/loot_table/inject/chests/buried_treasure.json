@@ -16,7 +16,7 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdl.notch_diary"
+                "translate": "item.cdl.ultimate_heart_of_the_sea"
               },
               "target": "item_name"
             },
@@ -24,9 +24,9 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "amount": 5.0,
-                  "attribute": "minecraft:generic.luck",
-                  "id": "minecraft:generic.luck",
+                  "amount": 1.0,
+                  "attribute": "minecraft:generic.oxygen_bonus",
+                  "id": "minecraft:generic.oxygen_bonus",
                   "operation": "add_value",
                   "slot": "hand"
                 }
@@ -34,11 +34,11 @@
               "replace": false
             }
           ],
-          "name": "minecraft:written_book"
+          "name": "minecraft:heart_of_the_sea"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "cdl:inject/chests/stronghold_library"
+  "random_sequence": "cdl:inject/chests/buried_treasure"
 }

@@ -23,10 +23,21 @@
   "item.cdl.herobrine_horcrux": "Herobrine's Horcrux",
   "item.cdl.frost_walker": "Frostläufer Stiefel",
   "item.cdl.flash_boots": "Flash Stiefel",
+  "item.cdl.moon_crystal": "Mond Kristall",
+  "item.cdl.mjölnir": "Mjölnir",
+  "item.cdl.poseidon_trident": "Dreizack der See",
+  "item.cdl.birthday_cake": "Geburtstagstorte",
+  "item.cdl.grandma_cookie": "Oma's Keks",
+  "item.cdl.ultimate_heart_of_the_sea": "Ultimates Herz des Meeres",
+  "item.cdl.super_heavy_core": "Superschwerer Kern",
 
   "lore.cdl.evil_pumpkin": "Sieht gruselig aus...",
   "lore.cdl.herobrine_sword": "Sieht sooo mächtig aus...",
   "lore.cdl.herobrine_chestplate": "Sieht sooo mächtig aus...",
-  "lore.cdl.herobrine_horcrux": "Eine unheimliche Aura umgibt es"
+  "lore.cdl.herobrine_horcrux": "Eine unheimliche Aura umgibt es",
+  "lore.cdl.birthday_cake_1": "für Dorfbewohner #42",
+  "lore.cdl.birthday_cake_2": "für Dorfbewohner #12",
+  "lore.cdl.birthday_cake_3": "für Dorfbewohner #3",
+  "lore.cdl.birthday_cake_4": "für Dorfbewohner #6"
 
 }

@@ -5,7 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "chance": 0.5,
+          "chance": 0.05,
           "condition": "minecraft:random_chance"
         }
       ],
@@ -53,54 +53,10 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdl.flash_boots"
+                "color": "red",
+                "translate": "item.cdl.blood_diamond"
               },
               "target": "item_name"
-            },
-            {
-              "components": {
-                "minecraft:dyed_color": {
-                  "rgb": 16773632,
-                  "show_in_tooltip": false
-                }
-              },
-              "function": "minecraft:set_components"
-            },
-            {
-              "function": "minecraft:set_attributes",
-              "modifiers": [
-                {
-                  "amount": 1.0,
-                  "attribute": "minecraft:generic.movement_speed",
-                  "id": "minecraft:generic.movement_speed",
-                  "operation": "add_value",
-                  "slot": "feet"
-                }
-              ],
-              "replace": false
-            }
-          ],
-          "name": "minecraft:leather_boots"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "translate": "item.cdl.herobrine_sword"
-              },
-              "target": "item_name"
-            },
-            {
-              "function": "minecraft:set_lore",
-              "lore": [
-                {
-                  "color": "gray",
-                  "translate": "lore.cdl.herobrine_sword"
-                }
-              ],
-              "mode": "append"
             },
             {
               "add": false,
@@ -108,67 +64,9 @@
                 "minecraft:vanishing_curse": 1.0
               },
               "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:binding_curse": 1.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:fire_aspect": 1.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:sharpness": 3.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:sweeping_edge": 3.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:knockback": 3.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:unbreaking": 3.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:mending": 3.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.7,
-                "min": 0.2
-              },
-              "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:diamond_sword"
+          "name": "minecraft:diamond"
         },
         {
           "type": "minecraft:item",
@@ -176,19 +74,10 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdl.herobrine_chestplate"
+                "color": "red",
+                "translate": "item.cdl.blood_emerald"
               },
               "target": "item_name"
-            },
-            {
-              "function": "minecraft:set_lore",
-              "lore": [
-                {
-                  "color": "gray",
-                  "translate": "lore.cdl.herobrine_chestplate"
-                }
-              ],
-              "mode": "append"
             },
             {
               "add": false,
@@ -196,69 +85,9 @@
                 "minecraft:vanishing_curse": 1.0
               },
               "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:binding_curse": 1.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:thorns": 1.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:protection": 3.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:fire_protection": 3.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:unbreaking": 3.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:mending": 3.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "components": {
-                "minecraft:trim": {
-                  "material": "minecraft:netherite",
-                  "pattern": "minecraft:rib"
-                }
-              },
-              "function": "minecraft:set_components"
-            },
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.7,
-                "min": 0.2
-              },
-              "function": "minecraft:set_damage"
             }
           ],
-          "name": "minecraft:diamond_chestplate"
+          "name": "minecraft:emerald"
         },
         {
           "type": "minecraft:item",
@@ -266,7 +95,8 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdl.notch_apple"
+                "color": "red",
+                "translate": "item.cdl.moon_crystal"
               },
               "target": "item_name"
             },
@@ -274,9 +104,9 @@
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
-                  "amount": 5.0,
-                  "attribute": "minecraft:generic.max_health",
-                  "id": "minecraft:generic.max_health",
+                  "amount": 3.0,
+                  "attribute": "minecraft:generic.luck",
+                  "id": "minecraft:generic.luck",
                   "operation": "add_value",
                   "slot": "hand"
                 }
@@ -284,7 +114,7 @@
               "replace": false
             }
           ],
-          "name": "minecraft:enchanted_golden_apple"
+          "name": "minecraft:amethyst_shard"
         }
       ],
       "rolls": 1.0

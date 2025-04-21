@@ -7,9 +7,11 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.armortrim.ArmorTrim;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimPattern;
@@ -20,6 +22,8 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import xxrexraptorxx.cdl.main.References;
+
+import java.util.function.Supplier;
 
 public class LootHelper {
 
@@ -35,6 +39,16 @@ public class LootHelper {
 
     public static LootItemFunction.Builder setLore(String name) {
         return new SetLoreFunction.Builder().addLine(Component.translatable("lore." + References.MODID + "." + name));
+    }
+
+
+    public static LootItemFunction.Builder setCount(int min, int max) {
+        return SetItemCountFunction.setCount(UniformGenerator.between(min, max));
+    }
+
+
+    public static LootItemFunction.Builder setCount(int count) {
+        return SetItemCountFunction.setCount(ConstantValue.exactly(count));
     }
 
 
@@ -91,4 +105,10 @@ public class LootHelper {
     public static LootItemFunction.Builder setColor(int red, int blue, int green) {
         return setColor(red<<16 + green<<8 + blue);
     }
+
+
+    public static LootItemFunction.Builder setFoodEffect(Supplier<MobEffectInstance> effect, float propability) {
+        return SetComponentsFunction.setComponent(DataComponents.FOOD, new FoodProperties.Builder().effect(effect, propability).build());
+    }
+
 }

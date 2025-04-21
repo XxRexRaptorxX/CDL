@@ -1,0 +1,154 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "chance": 0.05,
+          "condition": "minecraft:random_chance"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.birthday_cake"
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "color": "gray",
+                  "translate": "lore.cdl.birthday_cake_1"
+                }
+              ],
+              "mode": "append"
+            }
+          ],
+          "name": "minecraft:cake"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.birthday_cake"
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "color": "gray",
+                  "translate": "lore.cdl.birthday_cake_2"
+                }
+              ],
+              "mode": "append"
+            }
+          ],
+          "name": "minecraft:cake"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.birthday_cake"
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "color": "gray",
+                  "translate": "lore.cdl.birthday_cake_3"
+                }
+              ],
+              "mode": "append"
+            }
+          ],
+          "name": "minecraft:cake"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.birthday_cake"
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "color": "gray",
+                  "translate": "lore.cdl.birthday_cake_4"
+                }
+              ],
+              "mode": "append"
+            }
+          ],
+          "name": "minecraft:cake"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.grandma_cookie"
+              },
+              "target": "item_name"
+            },
+            {
+              "components": {
+                "minecraft:food": {
+                  "effects": [
+                    {
+                      "effect": {
+                        "duration": 90,
+                        "id": "minecraft:regeneration",
+                        "neoforge:cures": [
+                          "protected_by_totem",
+                          "milk"
+                        ],
+                        "show_icon": true
+                      }
+                    }
+                  ],
+                  "nutrition": 0,
+                  "saturation": 0.0
+                }
+              },
+              "function": "minecraft:set_components"
+            },
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 15.0,
+                "min": 5.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:cookie"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "cdl:inject/chests/village/village_plains_house"
+}

@@ -132,6 +132,46 @@
             }
           ],
           "name": "minecraft:fishing_rod"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.poseidon_trident"
+              },
+              "target": "item_name"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:riptide": 3.0
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:impaling": {
+                  "type": "minecraft:uniform",
+                  "max": 5.0,
+                  "min": 3.0
+                }
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.7,
+                "min": 0.2
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "minecraft:trident"
         }
       ],
       "rolls": 1.0

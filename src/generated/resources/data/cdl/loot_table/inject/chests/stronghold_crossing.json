@@ -5,7 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "chance": 0.01,
+          "chance": 0.03,
           "condition": "minecraft:random_chance"
         }
       ],
@@ -29,20 +29,6 @@
                 }
               ],
               "mode": "append"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:vanishing_curse": 1.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:binding_curse": 1.0
-              },
-              "function": "minecraft:set_enchantments"
             },
             {
               "add": false,
@@ -88,6 +74,20 @@
             },
             {
               "add": false,
+              "enchantments": {
+                "minecraft:vanishing_curse": 1.0
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:binding_curse": 1.0
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
               "damage": {
                 "type": "minecraft:uniform",
                 "max": 0.7,
@@ -117,20 +117,6 @@
                 }
               ],
               "mode": "append"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:vanishing_curse": 1.0
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:binding_curse": 1.0
-              },
-              "function": "minecraft:set_enchantments"
             },
             {
               "add": false,
@@ -168,10 +154,25 @@
               "function": "minecraft:set_enchantments"
             },
             {
+              "add": false,
+              "enchantments": {
+                "minecraft:vanishing_curse": 1.0
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:binding_curse": 1.0
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
               "components": {
                 "minecraft:trim": {
                   "material": "minecraft:netherite",
-                  "pattern": "minecraft:rib"
+                  "pattern": "minecraft:silence",
+                  "show_in_tooltip": false
                 }
               },
               "function": "minecraft:set_components"

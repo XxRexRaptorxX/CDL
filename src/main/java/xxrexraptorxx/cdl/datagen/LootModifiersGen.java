@@ -7,6 +7,8 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -87,7 +89,11 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 .add(item(Items.EMERALD)
                         .apply(LootHelper.setItemName("blood_emerald", ChatFormatting.RED))
                         .apply(LootHelper.setEnchantment(Enchantments.VANISHING_CURSE, lookupEnchantments))
-                );
+                )
+                .add(item(Items.AMETHYST_SHARD)
+                        .apply(LootHelper.setItemName("moon_crystal", ChatFormatting.RED))
+                        .apply(LootHelper.setAttribute(Attributes.LUCK, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(3), EquipmentSlotGroup.HAND))
+        );
 
 
         builder(BuiltInLootTables.SIMPLE_DUNGEON, 0.05).getLootPool()
@@ -120,6 +126,12 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setEnchantment(Enchantments.UNBREAKING, 1, 3, lookupEnchantments))
                         .apply(LootHelper.setEnchantment(Enchantments.LUCK_OF_THE_SEA, 3, lookupEnchantments))
                         .apply(LootHelper.setEnchantment(Enchantments.LURE, 1, 3, lookupEnchantments))
+                        .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.TRIDENT)
+                        .apply(LootHelper.setItemName("poseidon_trident"))
+                        .apply(LootHelper.setEnchantment(Enchantments.RIPTIDE, 3, lookupEnchantments))
+                        .apply(LootHelper.setEnchantment(Enchantments.IMPALING, 3, 5, lookupEnchantments))
                         .apply(LootHelper.setDamage())
                 );
 
@@ -154,6 +166,10 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setItemName("thiefs_sword"))
                         .apply(LootHelper.setEnchantment(Enchantments.LOOTING, 3, lookupEnchantments))
                         .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.AMETHYST_SHARD)
+                        .apply(LootHelper.setItemName("moon_crystal", ChatFormatting.RED))
+                        .apply(LootHelper.setAttribute(Attributes.LUCK, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(3), EquipmentSlotGroup.HAND))
                 );
 
 
@@ -205,6 +221,16 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setColor(16773632))
                         .apply(LootHelper.setArmorTrim(TrimMaterials.REDSTONE, TrimPatterns.TIDE, lookupTrimMaterials, lookupTrimPatterns))
                         .apply(LootHelper.setAttribute(Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(1), EquipmentSlotGroup.FEET))
+                )
+                .add(item(Items.MACE)
+                        .apply(LootHelper.setItemName("mjölnir"))
+                        .apply(LootHelper.setEnchantment(Enchantments.KNOCKBACK, 1, lookupEnchantments))
+                        .apply(LootHelper.setEnchantment(Enchantments.DENSITY, 5, lookupEnchantments))
+                        .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.HEAVY_CORE)
+                        .apply(LootHelper.setItemName("super_heavy_core"))
+                        .apply(LootHelper.setAttribute(Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(1), EquipmentSlotGroup.HAND))
                 );
 
 
@@ -212,6 +238,54 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 .add(item(Items.BLAZE_ROD)
                         .apply(LootHelper.setItemName("charged_blaze_rod"))
                         .apply(LootHelper.setEnchantment(Enchantments.FIRE_ASPECT, 10, lookupEnchantments))
+                );
+
+
+        builder(BuiltInLootTables.VILLAGE_PLAINS_HOUSE, 0.05).getLootPool()
+                .add(item(Items.CAKE)
+                        .apply(LootHelper.setItemName("birthday_cake"))
+                        .apply(LootHelper.setLore("birthday_cake_1", ChatFormatting.GRAY))
+                )
+                .add(item(Items.CAKE)
+                        .apply(LootHelper.setItemName("birthday_cake"))
+                        .apply(LootHelper.setLore("birthday_cake_2", ChatFormatting.GRAY))
+                )
+                .add(item(Items.CAKE)
+                        .apply(LootHelper.setItemName("birthday_cake"))
+                        .apply(LootHelper.setLore("birthday_cake_3", ChatFormatting.GRAY))
+                )
+                .add(item(Items.CAKE)
+                        .apply(LootHelper.setItemName("birthday_cake"))
+                        .apply(LootHelper.setLore("birthday_cake_4", ChatFormatting.GRAY))
+                )
+                .add(item(Items.COOKIE)
+                        .apply(LootHelper.setItemName("grandma_cookie"))
+                        .apply(LootHelper.setFoodEffect(() -> new MobEffectInstance(MobEffects.REGENERATION, 90), 1))
+                        .apply(LootHelper.setCount(5, 15))
+                );
+
+
+        builder(BuiltInLootTables.VILLAGE_TAIGA_HOUSE, 0.05).getLootPool()
+                .add(item(Items.CAKE)
+                        .apply(LootHelper.setItemName("birthday_cake"))
+                        .apply(LootHelper.setLore("birthday_cake_1", ChatFormatting.GRAY))
+                )
+                .add(item(Items.CAKE)
+                        .apply(LootHelper.setItemName("birthday_cake"))
+                        .apply(LootHelper.setLore("birthday_cake_2", ChatFormatting.GRAY))
+                )
+                .add(item(Items.CAKE)
+                        .apply(LootHelper.setItemName("birthday_cake"))
+                        .apply(LootHelper.setLore("birthday_cake_3", ChatFormatting.GRAY))
+                )
+                .add(item(Items.CAKE)
+                        .apply(LootHelper.setItemName("birthday_cake"))
+                        .apply(LootHelper.setLore("birthday_cake_4", ChatFormatting.GRAY))
+                )
+                .add(item(Items.COOKIE)
+                        .apply(LootHelper.setItemName("grandma_cookie"))
+                        .apply(LootHelper.setFoodEffect(() -> new MobEffectInstance(MobEffects.REGENERATION, 90), 1))
+                        .apply(LootHelper.setCount(5, 15))
                 );
 
 
@@ -254,6 +328,13 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 .add(item(Items.WRITTEN_BOOK)
                         .apply(LootHelper.setItemName("notch_diary"))
                         .apply(LootHelper.setAttribute(Attributes.LUCK, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(5), EquipmentSlotGroup.HAND))
+                );
+
+
+        builder(BuiltInLootTables.BURIED_TREASURE, 0.03).getLootPool()
+                .add(item(Items.HEART_OF_THE_SEA)
+                        .apply(LootHelper.setItemName("ultimate_heart_of_the_sea"))
+                        .apply(LootHelper.setAttribute(Attributes.OXYGEN_BONUS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(1), EquipmentSlotGroup.HAND))
                 );
 
     }

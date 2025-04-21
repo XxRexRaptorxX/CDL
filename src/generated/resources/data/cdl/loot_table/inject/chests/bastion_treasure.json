@@ -38,6 +38,33 @@
             }
           ],
           "name": "minecraft:golden_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "color": "red",
+                "translate": "item.cdl.moon_crystal"
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": 3.0,
+                  "attribute": "minecraft:generic.luck",
+                  "id": "minecraft:generic.luck",
+                  "operation": "add_value",
+                  "slot": "hand"
+                }
+              ],
+              "replace": false
+            }
+          ],
+          "name": "minecraft:amethyst_shard"
         }
       ],
       "rolls": 1.0

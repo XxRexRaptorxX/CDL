@@ -23,9 +23,20 @@
   "item.cdl.herobrine_horcrux": "Herobrine's Horcrux",
   "item.cdl.frost_walker": "Frostwalker Boots",
   "item.cdl.flash_boots": "Flash Boots",
+  "item.cdl.moon_crystal": "Moon Crystal",
+  "item.cdl.mjölnir": "Mjölnir",
+  "item.cdl.poseidon_trident": "Trident of the Sea",
+  "item.cdl.birthday_cake": "Birthday Cake",
+  "item.cdl.grandma_cookie": "Grandma's Cookie",
+  "item.cdl.ultimate_heart_of_the_sea": "Ultimate Heart of the Sea",
+  "item.cdl.super_heavy_core": "Super Heavy Core",
 
   "lore.cdl.evil_pumpkin": "Looks creepy...",
   "lore.cdl.herobrine_sword": "Looks sooo powerful...",
   "lore.cdl.herobrine_chestplate": "Looks sooo powerful...",
-  "lore.cdl.herobrine_horcrux": "There is an eerie aura surrounding it"
+  "lore.cdl.herobrine_horcrux": "There is an eerie aura surrounding it",
+  "lore.cdl.birthday_cake_1": "for Villager #42",
+  "lore.cdl.birthday_cake_2": "for Villager #12",
+  "lore.cdl.birthday_cake_3": "for Villager #3",
+  "lore.cdl.birthday_cake_4": "for Villager #6"
 }
