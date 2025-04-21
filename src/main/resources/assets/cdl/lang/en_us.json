@@ -16,7 +16,16 @@
   "item.cdl.thiefs_sword": "Thief's Sword",
   "item.cdl.royal_horse_armor": "Royal Horse Armor",
   "item.cdl.reinforced_chestplate": "Reinforced Chestplate",
+  "item.cdl.notch_apple": "Notch's Apple",
+  "item.cdl.notch_diary": "Notch's Diary",
+  "item.cdl.herobrine_sword": "Herobrine's Sword",
+  "item.cdl.herobrine_chestplate": "Herobrine's Chestplate",
+  "item.cdl.herobrine_horcrux": "Herobrine's Horcrux",
+  "item.cdl.frost_walker": "Frostwalker Boots",
+  "item.cdl.flash_boots": "Flash Boots",
 
-
-  "lore.cdl.evil_pumpkin": "Looks creepy..."
+  "lore.cdl.evil_pumpkin": "Looks creepy...",
+  "lore.cdl.herobrine_sword": "Looks sooo powerful...",
+  "lore.cdl.herobrine_chestplate": "Looks sooo powerful...",
+  "lore.cdl.herobrine_horcrux": "There is an eerie aura surrounding it"
 }

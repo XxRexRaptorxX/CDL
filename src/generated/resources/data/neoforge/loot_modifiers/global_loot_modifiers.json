@@ -1,16 +1,20 @@
 {
   "entries": [
+    "cdl:inject/chests/bastion_other",
+    "cdl:inject/chests/woodland_mansion",
+    "cdl:inject/chests/pillager_outpost",
+    "cdl:inject/chests/igloo_chest",
+    "cdl:inject/chests/bastion_treasure",
+    "cdl:inject/chests/trial_chambers/reward_ominous_unique",
     "cdl:inject/chests/simple_dungeon",
     "cdl:inject/chests/desert_pyramid",
     "cdl:inject/chests/trial_chambers/reward_ominous",
-    "cdl:inject/chests/bastion_other",
-    "cdl:inject/chests/woodland_mansion",
+    "cdl:inject/chests/stronghold_crossing",
     "cdl:inject/chests/abandoned_mineshaft",
     "cdl:inject/chests/nether_bridge",
     "cdl:inject/chests/shipwreck_treasure",
     "cdl:inject/chests/trial_chambers/reward_rare",
-    "cdl:inject/chests/pillager_outpost",
-    "cdl:inject/chests/bastion_treasure"
+    "cdl:inject/chests/stronghold_library"
   ],
   "replace": false
 }

@@ -1,13 +1,17 @@
-// 1.21	2025-04-18T18:14:58.2875565	Global Loot Modifiers : cdl
+// 1.21	2025-04-21T17:07:48.8114171	Global Loot Modifiers : cdl
 b4441a07a7c3c99b33069aaaea2e5117f2318124 data/cdl/loot_modifiers/inject/chests/abandoned_mineshaft.json
 4228900040ad22544fbea0d7713e7be30611586c data/cdl/loot_modifiers/inject/chests/bastion_other.json
 6b84128cb48606bc3f94f0ab360d268288b57444 data/cdl/loot_modifiers/inject/chests/bastion_treasure.json
 4f63f339f9c4dfd443c6707b1830ad58fb9f05ae data/cdl/loot_modifiers/inject/chests/desert_pyramid.json
+645767e4ffba113fddf0707f6d110f01f16971ac data/cdl/loot_modifiers/inject/chests/igloo_chest.json
 df1d9ceb2de89679f83cc4e3f22130c66981fa79 data/cdl/loot_modifiers/inject/chests/nether_bridge.json
 ac7e9522fa868b2cc6e763f48008b53be26a209c data/cdl/loot_modifiers/inject/chests/pillager_outpost.json
 f03f45ca21af9375a1ef9125131658723a42790f data/cdl/loot_modifiers/inject/chests/shipwreck_treasure.json
 b92a0722479018879db9a2e706ff3671aa907dd8 data/cdl/loot_modifiers/inject/chests/simple_dungeon.json
+502e94035b88b6a64176e94106c15841ac9af7cc data/cdl/loot_modifiers/inject/chests/stronghold_crossing.json
+6f72794e34b9a8362e126a2453017927dcf3fb93 data/cdl/loot_modifiers/inject/chests/stronghold_library.json
 dd249d19eac919c253203645a056d788b2e66b16 data/cdl/loot_modifiers/inject/chests/trial_chambers/reward_ominous.json
+4267e54371dd7cd0e8e0b03db4e3ce8deb1c286b data/cdl/loot_modifiers/inject/chests/trial_chambers/reward_ominous_unique.json
 7fdbd52f50e17b3de3cdb27e5126d9816841d4a8 data/cdl/loot_modifiers/inject/chests/trial_chambers/reward_rare.json
 0c34bb0db48109321f47ad12917559c5dcff7fac data/cdl/loot_modifiers/inject/chests/woodland_mansion.json
-2ebefcc37cb6f475f593b30fd59e09ac3aa81933 data/neoforge/loot_modifiers/global_loot_modifiers.json
+84212e32970f10dcb68ce8667b5a11ce81badd2f data/neoforge/loot_modifiers/global_loot_modifiers.json

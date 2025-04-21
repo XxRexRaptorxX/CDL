@@ -1,0 +1,79 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "chance": 0.05,
+          "condition": "minecraft:random_chance"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.notch_apple"
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": 5.0,
+                  "attribute": "minecraft:generic.max_health",
+                  "id": "minecraft:generic.max_health",
+                  "operation": "add_value",
+                  "slot": "hand"
+                }
+              ],
+              "replace": false
+            }
+          ],
+          "name": "minecraft:enchanted_golden_apple"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.flash_boots"
+              },
+              "target": "item_name"
+            },
+            {
+              "components": {
+                "minecraft:dyed_color": {
+                  "rgb": 16773632,
+                  "show_in_tooltip": false
+                }
+              },
+              "function": "minecraft:set_components"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": 1.0,
+                  "attribute": "minecraft:generic.movement_speed",
+                  "id": "minecraft:generic.movement_speed",
+                  "operation": "add_value",
+                  "slot": "feet"
+                }
+              ],
+              "replace": false
+            }
+          ],
+          "name": "minecraft:leather_boots"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "cdl:inject/chests/trial_chambers/reward_ominous_unique"
+}

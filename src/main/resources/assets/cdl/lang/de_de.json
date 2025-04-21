@@ -16,7 +16,17 @@
   "item.cdl.thiefs_sword": "Thief's Sword",
   "item.cdl.royal_horse_armor": "Königliche Pferderüstung",
   "item.cdl.reinforced_chestplate": "Verstärkter Harnisch",
+  "item.cdl.notch_apple": "Notch's Apfel",
+  "item.cdl.notch_diary": "Notch's Tagebuch",
+  "item.cdl.herobrine_sword": "Herobrine's Schwert",
+  "item.cdl.herobrine_chestplate": "Herobrine's Rüstung",
+  "item.cdl.herobrine_horcrux": "Herobrine's Horcrux",
+  "item.cdl.frost_walker": "Frostläufer Stiefel",
+  "item.cdl.flash_boots": "Flash Stiefel",
 
-  "lore.cdl.evil_pumpkin": "Sieht gruselig aus..."
+  "lore.cdl.evil_pumpkin": "Sieht gruselig aus...",
+  "lore.cdl.herobrine_sword": "Sieht sooo mächtig aus...",
+  "lore.cdl.herobrine_chestplate": "Sieht sooo mächtig aus...",
+  "lore.cdl.herobrine_horcrux": "Eine unheimliche Aura umgibt es"
 
 }
