@@ -16,26 +16,6 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "translate": "item.cdl.charged_blaze_rod"
-              },
-              "target": "item_name"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:fire_aspect": 10.0
-              },
-              "function": "minecraft:set_enchantments"
-            }
-          ],
-          "name": "minecraft:blaze_rod"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
                 "translate": "item.cdl.note"
               },
               "target": "item_name"
@@ -44,7 +24,7 @@
               "function": "minecraft:set_lore",
               "lore": [
                 {
-                  "translate": "lore.cdl.note_lost"
+                  "translate": "lore.cdl.note_dig_down"
                 }
               ],
               "mode": "append"
@@ -56,5 +36,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "cdl:inject/chests/nether_bridge"
+  "random_sequence": "cdl:inject/chests/spawn_bonus_chest"
 }

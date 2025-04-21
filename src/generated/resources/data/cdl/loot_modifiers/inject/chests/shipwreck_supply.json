@@ -1,0 +1,10 @@
+{
+  "type": "cdl:special_loot_gen",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:chests/shipwreck_supply"
+    }
+  ],
+  "loot_table": "cdl:inject/chests/shipwreck_supply"
+}

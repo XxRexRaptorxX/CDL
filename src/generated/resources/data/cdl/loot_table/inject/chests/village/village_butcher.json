@@ -1,0 +1,63 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "chance": 0.05,
+          "condition": "minecraft:random_chance"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.bio_steak"
+              },
+              "target": "item_name"
+            },
+            {
+              "components": {
+                "minecraft:food": {
+                  "effects": [
+                    {
+                      "effect": {
+                        "duration": 200,
+                        "id": "minecraft:saturation",
+                        "neoforge:cures": [
+                          "protected_by_totem",
+                          "milk"
+                        ],
+                        "show_icon": true
+                      },
+                      "probability": 0.9
+                    }
+                  ],
+                  "nutrition": 0,
+                  "saturation": 0.0
+                }
+              },
+              "function": "minecraft:set_components"
+            },
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 8.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:beef"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "cdl:inject/chests/village/village_butcher"
+}

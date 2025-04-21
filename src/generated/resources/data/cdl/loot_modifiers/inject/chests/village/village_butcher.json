@@ -1,0 +1,10 @@
+{
+  "type": "cdl:special_loot_gen",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:chests/village/village_butcher"
+    }
+  ],
+  "loot_table": "cdl:inject/chests/village/village_butcher"
+}

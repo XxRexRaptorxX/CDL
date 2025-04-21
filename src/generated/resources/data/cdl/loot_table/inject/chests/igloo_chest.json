@@ -39,6 +39,29 @@
             }
           ],
           "name": "minecraft:diamond_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "color": "red",
+                "translate": "item.cdl.life_essence"
+              },
+              "target": "item_name"
+            },
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:experience_bottle"
         }
       ],
       "rolls": 1.0

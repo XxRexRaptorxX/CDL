@@ -40,6 +40,113 @@
             }
           ],
           "name": "minecraft:carved_pumpkin"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.radiating_phantom_membrane"
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": -0.03,
+                  "attribute": "minecraft:generic.gravity",
+                  "id": "minecraft:generic.gravity",
+                  "operation": "add_value",
+                  "slot": "hand"
+                }
+              ],
+              "replace": false
+            },
+            {
+              "components": {
+                "minecraft:enchantment_glint_override": true
+              },
+              "function": "minecraft:set_components"
+            }
+          ],
+          "name": "minecraft:phantom_membrane"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.delicious_apple"
+              },
+              "target": "item_name"
+            },
+            {
+              "components": {
+                "minecraft:food": {
+                  "effects": [
+                    {
+                      "effect": {
+                        "amplifier": 3,
+                        "duration": 200,
+                        "id": "minecraft:poison",
+                        "neoforge:cures": [
+                          "protected_by_totem",
+                          "honey",
+                          "milk"
+                        ],
+                        "show_icon": true
+                      },
+                      "probability": 0.5
+                    }
+                  ],
+                  "nutrition": 0,
+                  "saturation": 0.0
+                }
+              },
+              "function": "minecraft:set_components"
+            },
+            {
+              "components": {
+                "minecraft:enchantment_glint_override": true
+              },
+              "function": "minecraft:set_components"
+            },
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:apple"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.note"
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "translate": "lore.cdl.note_find_the_orb"
+                }
+              ],
+              "mode": "append"
+            }
+          ],
+          "name": "minecraft:paper"
         }
       ],
       "rolls": 1.0

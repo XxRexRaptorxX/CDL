@@ -45,6 +45,86 @@
             {
               "function": "minecraft:set_name",
               "name": {
+                "translate": "item.cdl.chungus_sword"
+              },
+              "target": "item_name"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:knockback": 3.0
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:looting": {
+                  "type": "minecraft:uniform",
+                  "max": 5.0,
+                  "min": 1.0
+                }
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.7,
+                "min": 0.2
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "minecraft:iron_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.malgosha_sword"
+              },
+              "target": "item_name"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:fire_aspect": 5.0
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "enchantments": {
+                "minecraft:looting": {
+                  "type": "minecraft:uniform",
+                  "max": 5.0,
+                  "min": 1.0
+                }
+              },
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.7,
+                "min": 0.2
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "minecraft:iron_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
                 "color": "red",
                 "translate": "item.cdl.moon_crystal"
               },
@@ -62,6 +142,12 @@
                 }
               ],
               "replace": false
+            },
+            {
+              "components": {
+                "minecraft:enchantment_glint_override": true
+              },
+              "function": "minecraft:set_components"
             }
           ],
           "name": "minecraft:amethyst_shard"

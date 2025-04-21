@@ -31,6 +31,7 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.neoforged.neoforge.common.data.GlobalLootModifierProvider;
 import net.neoforged.neoforge.common.loot.LootTableIdCondition;
 import xxrexraptorxx.cdl.main.References;
@@ -71,6 +72,14 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setEnchantment(Enchantments.FORTUNE, 2, 3, lookupEnchantments))
                         .apply(LootHelper.setEnchantment(Enchantments.EFFICIENCY, 2, 5, lookupEnchantments))
                         .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.PAPER)
+                        .apply(LootHelper.setItemName("note"))
+                        .apply(LootHelper.setLore("note_lost"))
+                )
+                .add(item(Items.PAPER)
+                        .apply(LootHelper.setItemName("note"))
+                        .apply(LootHelper.setLore("note_dig_down"))
                 );
 
 
@@ -133,6 +142,19 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setEnchantment(Enchantments.RIPTIDE, 3, lookupEnchantments))
                         .apply(LootHelper.setEnchantment(Enchantments.IMPALING, 3, 5, lookupEnchantments))
                         .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.DIAMOND_PICKAXE)
+                        .apply(LootHelper.setItemName("underwater_pickaxe"))
+                        .apply(LootHelper.setAttribute(Attributes.WATER_MOVEMENT_EFFICIENCY, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(0.2f, 1.0f), EquipmentSlotGroup.MAINHAND))
+                        .apply(LootHelper.setDamage())
+                );
+
+
+        builder(BuiltInLootTables.SHIPWRECK_SUPPLY, 0.05).getLootPool()
+                .add(item(Items.PUFFERFISH)
+                        .apply(LootHelper.setItemName("magical_fish"))
+                        .apply(LootHelper.setAttribute(Attributes.WATER_MOVEMENT_EFFICIENCY, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(0.1f, 0.6f), EquipmentSlotGroup.ANY))
+                        .apply(LootHelper.setGlint(true))
                 );
 
 
@@ -161,15 +183,35 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 );
 
 
+        builder(BuiltInLootTables.BASTION_HOGLIN_STABLE, 0.05).getLootPool()
+                .add(item(Items.BONE)
+                        .apply(LootHelper.setItemName("dennis_bone"))
+                        .apply(LootHelper.setLore("dennis_bone"))
+                );
+
+
         builder(BuiltInLootTables.BASTION_TREASURE, 0.05).getLootPool()
                 .add(item(Items.GOLDEN_SWORD)
                         .apply(LootHelper.setItemName("thiefs_sword"))
                         .apply(LootHelper.setEnchantment(Enchantments.LOOTING, 3, lookupEnchantments))
                         .apply(LootHelper.setDamage())
                 )
+                .add(item(Items.IRON_SWORD)
+                        .apply(LootHelper.setItemName("chungus_sword"))
+                        .apply(LootHelper.setEnchantment(Enchantments.KNOCKBACK, 3, lookupEnchantments))
+                        .apply(LootHelper.setEnchantment(Enchantments.LOOTING, 1, 5, lookupEnchantments))
+                        .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.IRON_SWORD)
+                        .apply(LootHelper.setItemName("malgosha_sword"))
+                        .apply(LootHelper.setEnchantment(Enchantments.FIRE_ASPECT, 5, lookupEnchantments))
+                        .apply(LootHelper.setEnchantment(Enchantments.LOOTING, 1, 5, lookupEnchantments))
+                        .apply(LootHelper.setDamage())
+                )
                 .add(item(Items.AMETHYST_SHARD)
                         .apply(LootHelper.setItemName("moon_crystal", ChatFormatting.RED))
                         .apply(LootHelper.setAttribute(Attributes.LUCK, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(3), EquipmentSlotGroup.HAND))
+                        .apply(LootHelper.setGlint(true))
                 );
 
 
@@ -178,7 +220,23 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setItemName("evil_pumpkin", ChatFormatting.DARK_RED))
                         .apply(LootHelper.setLore("evil_pumpkin", ChatFormatting.GRAY))
                         .apply(LootHelper.setEnchantment(Enchantments.BINDING_CURSE, lookupEnchantments))
+                )
+                .add(item(Items.PHANTOM_MEMBRANE)
+                        .apply(LootHelper.setItemName("radiating_phantom_membrane"))
+                        .apply(LootHelper.setAttribute(Attributes.GRAVITY, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(-0.03f), EquipmentSlotGroup.HAND))
+                        .apply(LootHelper.setGlint(true))
+                )
+                .add(item(Items.APPLE)
+                        .apply(LootHelper.setItemName("delicious_apple"))
+                        .apply(LootHelper.setFoodEffect(() -> new MobEffectInstance(MobEffects.POISON, 200, 3), 0.5f))
+                        .apply(LootHelper.setGlint(true))
+                        .apply(LootHelper.setCount(1, 3))
+                )
+                .add(item(Items.PAPER)
+                        .apply(LootHelper.setItemName("note"))
+                        .apply(LootHelper.setLore("note_find_the_orb"))
                 );
+
 
 
         builder(BuiltInLootTables.IGLOO_CHEST, 0.05).getLootPool()
@@ -186,6 +244,10 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setItemName("frost_walker", ChatFormatting.DARK_RED))
                         .apply(LootHelper.setEnchantment(Enchantments.FROST_WALKER, 3, lookupEnchantments))
                         .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.EXPERIENCE_BOTTLE)
+                        .apply(LootHelper.setItemName("life_essence", ChatFormatting.RED))
+                        .apply(LootHelper.setCount(1, 3))
                 );
 
 
@@ -238,6 +300,18 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 .add(item(Items.BLAZE_ROD)
                         .apply(LootHelper.setItemName("charged_blaze_rod"))
                         .apply(LootHelper.setEnchantment(Enchantments.FIRE_ASPECT, 10, lookupEnchantments))
+                )
+                .add(item(Items.PAPER)
+                        .apply(LootHelper.setItemName("note"))
+                        .apply(LootHelper.setLore("note_lost"))
+                );
+
+
+        builder(BuiltInLootTables.VILLAGE_BUTCHER, 0.05).getLootPool()
+                .add(item(Items.BEEF)
+                        .apply(LootHelper.setItemName("bio_steak"))
+                        .apply(LootHelper.setFoodEffect(() -> new MobEffectInstance(MobEffects.SATURATION, 200), 0.9f))
+                        .apply(LootHelper.setCount(1, 8))
                 );
 
 
@@ -262,6 +336,10 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setItemName("grandma_cookie"))
                         .apply(LootHelper.setFoodEffect(() -> new MobEffectInstance(MobEffects.REGENERATION, 90), 1))
                         .apply(LootHelper.setCount(5, 15))
+                )
+                .add(item(Items.PAPER)
+                        .apply(LootHelper.setItemName("note"))
+                        .apply(LootHelper.setLore("note_idiot"))
                 );
 
 
@@ -286,6 +364,10 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setItemName("grandma_cookie"))
                         .apply(LootHelper.setFoodEffect(() -> new MobEffectInstance(MobEffects.REGENERATION, 90), 1))
                         .apply(LootHelper.setCount(5, 15))
+                )
+                .add(item(Items.PAPER)
+                        .apply(LootHelper.setItemName("note"))
+                        .apply(LootHelper.setLore("note_idiot"))
                 );
 
 
@@ -321,13 +403,64 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setLore("herobrine_horcrux", ChatFormatting.GRAY))
                         .apply(LootHelper.setEnchantment(Enchantments.VANISHING_CURSE, lookupEnchantments))
                         .apply(LootHelper.setEnchantment(Enchantments.BINDING_CURSE, lookupEnchantments))
-        );
+                        .apply(LootHelper.setAttribute(Attributes.ENTITY_INTERACTION_RANGE, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(1), EquipmentSlotGroup.HAND))
+                )
+                .add(item(Items.EXPERIENCE_BOTTLE)
+                        .apply(LootHelper.setItemName("life_essence", ChatFormatting.RED))
+                        .apply(LootHelper.setCount(1, 3))
+                )
+                .add(item(Items.BEDROCK)
+                        .apply(LootHelper.setLore("bedrock"))
+                );
+                //.add(item(Items.ENDER_EYE) TODO for MC 1.21.6
+                //        .apply(LootHelper.setItemName("all_seeing_ender_eye"))
+                //        .apply(LootHelper.setAttribute(Attributes.CAMERA_DISTANCE, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(4), EquipmentSlotGroup.HAND))
+                //);
 
 
         builder(BuiltInLootTables.STRONGHOLD_LIBRARY, 0.03).getLootPool()
                 .add(item(Items.WRITTEN_BOOK)
                         .apply(LootHelper.setItemName("notch_diary"))
                         .apply(LootHelper.setAttribute(Attributes.LUCK, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(5), EquipmentSlotGroup.HAND))
+                )
+                .add(item(Items.KNOWLEDGE_BOOK)
+                        .apply(LootHelper.setItemName("attack_range_spellbook"))
+                        .apply(LootHelper.setAttribute(Attributes.ENTITY_INTERACTION_RANGE, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(1, 3), EquipmentSlotGroup.HAND))
+                        .apply(LootHelper.setGlint(true))
+                )
+                .add(item(Items.KNOWLEDGE_BOOK)
+                        .apply(LootHelper.setItemName("build_range_spellbook"))
+                        .apply(LootHelper.setAttribute(Attributes.BLOCK_INTERACTION_RANGE, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(1, 3), EquipmentSlotGroup.HAND))
+                        .apply(LootHelper.setGlint(true))
+                )
+                .add(item(Items.KNOWLEDGE_BOOK)
+                        .apply(LootHelper.setItemName("step_spellbook"))
+                        .apply(LootHelper.setAttribute(Attributes.STEP_HEIGHT, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(1, 2), EquipmentSlotGroup.HAND))
+                        .apply(LootHelper.setGlint(true))
+                )
+                .add(item(Items.KNOWLEDGE_BOOK)
+                        .apply(LootHelper.setItemName("sneak_spellbook"))
+                        .apply(LootHelper.setAttribute(Attributes.SNEAKING_SPEED, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(0.2f, 0.5f), EquipmentSlotGroup.HAND))
+                        .apply(LootHelper.setGlint(true))
+                )
+                .add(item(Items.KNOWLEDGE_BOOK)
+                        .apply(LootHelper.setItemName("walk_spellbook"))
+                        .apply(LootHelper.setAttribute(Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(0.2f, 0.8f), EquipmentSlotGroup.HAND))
+                        .apply(LootHelper.setGlint(true))
+                )
+                .add(item(Items.KNOWLEDGE_BOOK)
+                        .apply(LootHelper.setItemName("fly_spellbook"))
+                        .apply(LootHelper.setAttribute(Attributes.FLYING_SPEED, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(0.2f, 0.5f), EquipmentSlotGroup.HAND))
+                        .apply(LootHelper.setGlint(true))
+                )
+                .add(item(Items.KNOWLEDGE_BOOK)
+                        .apply(LootHelper.setItemName("jump_spellbook"))
+                        .apply(LootHelper.setAttribute(Attributes.JUMP_STRENGTH, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(0.2f, 0.4f), EquipmentSlotGroup.HAND))
+                        .apply(LootHelper.setGlint(true))
+                )
+                .add(item(Items.PAPER)
+                        .apply(LootHelper.setItemName("note"))
+                        .apply(LootHelper.setLore("note_find_the_orb"))
                 );
 
 
@@ -337,6 +470,31 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setAttribute(Attributes.OXYGEN_BONUS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(1), EquipmentSlotGroup.HAND))
                 );
 
+
+        builder(BuiltInLootTables.END_CITY_TREASURE, 0.05).getLootPool()
+                .add(item(Items.SHULKER_SPAWN_EGG)
+                        .apply(LootHelper.setItemName("shulker_egg"))
+                        .apply(LootHelper.setGlint(true))
+                        .apply(LootHelper.setAttribute(Attributes.GRAVITY, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(-0.07f), EquipmentSlotGroup.HAND))
+        );
+
+
+        builder(BuiltInLootTables.ANCIENT_CITY, 0.05).getLootPool()
+                .add(item(Items.PAPER)
+                        .apply(LootHelper.setItemName("note"))
+                        .apply(LootHelper.setLore("note_portal"))
+                )
+                .add(item(Items.PAPER)
+                        .apply(LootHelper.setItemName("note"))
+                        .apply(LootHelper.setLore("note_vibrations"))
+                );
+
+
+        builder(BuiltInLootTables.SPAWN_BONUS_CHEST, 0.05).getLootPool()
+                .add(item(Items.PAPER)
+                        .apply(LootHelper.setItemName("note"))
+                        .apply(LootHelper.setLore("note_dig_down"))
+                );
     }
 
 

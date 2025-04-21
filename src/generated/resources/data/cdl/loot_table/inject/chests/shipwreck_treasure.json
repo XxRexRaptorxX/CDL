@@ -172,6 +172,45 @@
             }
           ],
           "name": "minecraft:trident"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.underwater_pickaxe"
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": {
+                    "type": "minecraft:uniform",
+                    "max": 1.0,
+                    "min": 0.2
+                  },
+                  "attribute": "minecraft:generic.water_movement_efficiency",
+                  "id": "minecraft:generic.water_movement_efficiency",
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                }
+              ],
+              "replace": false
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.7,
+                "min": 0.2
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "minecraft:diamond_pickaxe"
         }
       ],
       "rolls": 1.0
