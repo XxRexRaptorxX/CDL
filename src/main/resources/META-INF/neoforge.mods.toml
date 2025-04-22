@@ -13,7 +13,7 @@ displayURL="https://www.curseforge.com/minecraft/mc-mods/customized-dungeon-loot
 logoFile="logo.png"
 #credits=""
 authors="${mod_authors}"
-description='''Adds vanilla items with special abilities to the dungeon chests, like enchantments, custom names, attributes and more cool features!'''
+description='''Fills the crates of the various structures in Minecraft with modified vanilla loot to find even more unique and special items!'''
 
 [[dependencies.${mod_id}]]
 modId="neoforge"
