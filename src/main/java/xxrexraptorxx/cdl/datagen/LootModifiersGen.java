@@ -80,6 +80,16 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 .add(item(Items.PAPER)
                         .apply(LootHelper.setItemName("note"))
                         .apply(LootHelper.setLore("note_dig_down"))
+                )
+                .add(item(Items.AMETHYST_SHARD)
+                        .apply(LootHelper.setItemName("cursed_crystal", ChatFormatting.RED))
+                        .apply(LootHelper.setAttribute(Attributes.MAX_HEALTH, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(1, 15), EquipmentSlotGroup.ANY))
+                        .apply(LootHelper.setGlint(true))
+                )
+                .add(item(Items.IRON_PICKAXE)
+                        .apply(LootHelper.setItemName("climbing_axe"))
+                        .apply(LootHelper.setDamage())
+                        .apply(LootHelper.setAttribute(Attributes.STEP_HEIGHT, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(1, 3), EquipmentSlotGroup.HAND))
                 );
 
 
@@ -89,7 +99,9 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 )
                 .add(item(Items.GOLDEN_HORSE_ARMOR)
                         .apply(LootHelper.setItemName("royal_horse_armor"))
-                        .apply(LootHelper.setEnchantment(Enchantments.PROTECTION, 3, 4, lookupEnchantments))
+                        .apply(LootHelper.setEnchantment(Enchantments.PROTECTION, 1, 2, lookupEnchantments))
+                        .apply(LootHelper.setAttribute(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(0.5F), EquipmentSlotGroup.ARMOR))
+                        .apply(LootHelper.setDamage())
                 )
                 .add(item(Items.DIAMOND)
                         .apply(LootHelper.setItemName("blood_diamond", ChatFormatting.RED))
@@ -100,9 +112,14 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setEnchantment(Enchantments.VANISHING_CURSE, lookupEnchantments))
                 )
                 .add(item(Items.AMETHYST_SHARD)
-                        .apply(LootHelper.setItemName("moon_crystal", ChatFormatting.RED))
+                        .apply(LootHelper.setItemName("moon_crystal"))
                         .apply(LootHelper.setAttribute(Attributes.LUCK, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(3), EquipmentSlotGroup.HAND))
-        );
+                )
+                .add(item(Items.AMETHYST_SHARD)
+                        .apply(LootHelper.setItemName("cursed_crystal", ChatFormatting.RED))
+                        .apply(LootHelper.setAttribute(Attributes.MAX_HEALTH, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(1, 15), EquipmentSlotGroup.ANY))
+                        .apply(LootHelper.setGlint(true))
+                );
 
 
         builder(BuiltInLootTables.SIMPLE_DUNGEON, 0.05).getLootPool()
@@ -113,6 +130,31 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setItemName("reinforced_chestplate"))
                         .apply(LootHelper.setEnchantment(Enchantments.PROTECTION, 3, 4, lookupEnchantments))
                         .apply(LootHelper.setEnchantment(Enchantments.UNBREAKING, 1, 3, lookupEnchantments))
+                        .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.IRON_HELMET)
+                        .apply(LootHelper.setItemName("hardened_iron_helmet"))
+                        .apply(LootHelper.setAttribute(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(0.5F), EquipmentSlotGroup.HEAD))
+                        .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.IRON_CHESTPLATE)
+                        .apply(LootHelper.setItemName("hardened_iron_chestplate"))
+                        .apply(LootHelper.setAttribute(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(0.5F), EquipmentSlotGroup.CHEST))
+                        .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.IRON_LEGGINGS)
+                        .apply(LootHelper.setItemName("hardened_iron_leggings"))
+                        .apply(LootHelper.setAttribute(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(0.5F), EquipmentSlotGroup.LEGS))
+                        .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.IRON_BOOTS)
+                        .apply(LootHelper.setItemName("hardened_iron_boots"))
+                        .apply(LootHelper.setAttribute(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(0.5F), EquipmentSlotGroup.FEET))
+                        .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.IRON_HORSE_ARMOR)
+                        .apply(LootHelper.setItemName("hardened_iron_horse_armor"))
+                        .apply(LootHelper.setAttribute(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(0.5F), EquipmentSlotGroup.ARMOR))
                         .apply(LootHelper.setDamage())
                 );
 
@@ -187,6 +229,12 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 .add(item(Items.BONE)
                         .apply(LootHelper.setItemName("dennis_bone"))
                         .apply(LootHelper.setLore("dennis_bone"))
+                )
+                .add(item(Items.GOLDEN_HORSE_ARMOR)
+                        .apply(LootHelper.setItemName("royal_horse_armor"))
+                        .apply(LootHelper.setEnchantment(Enchantments.PROTECTION, 1, 2, lookupEnchantments))
+                        .apply(LootHelper.setAttribute(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(0.5F), EquipmentSlotGroup.ARMOR))
+                        .apply(LootHelper.setDamage())
                 );
 
 
@@ -241,13 +289,18 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
 
         builder(BuiltInLootTables.IGLOO_CHEST, 0.05).getLootPool()
                 .add(item(Items.DIAMOND_BOOTS)
-                        .apply(LootHelper.setItemName("frost_walker", ChatFormatting.DARK_RED))
+                        .apply(LootHelper.setItemName("frost_walker"))
                         .apply(LootHelper.setEnchantment(Enchantments.FROST_WALKER, 3, lookupEnchantments))
                         .apply(LootHelper.setDamage())
                 )
                 .add(item(Items.EXPERIENCE_BOTTLE)
                         .apply(LootHelper.setItemName("life_essence", ChatFormatting.RED))
                         .apply(LootHelper.setCount(1, 3))
+                )
+                .add(item(Items.IRON_PICKAXE)
+                        .apply(LootHelper.setItemName("climbing_axe"))
+                        .apply(LootHelper.setDamage())
+                        .apply(LootHelper.setAttribute(Attributes.STEP_HEIGHT, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(1, 3), EquipmentSlotGroup.HAND))
                 );
 
 
@@ -262,6 +315,11 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setEnchantment(Enchantments.KNOCKBACK, 3, lookupEnchantments))
                         .apply(LootHelper.setEnchantment(Enchantments.BREACH, 1, 3, lookupEnchantments))
                         .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.CHAINMAIL_BOOTS)
+                        .apply(LootHelper.setItemName("climbing_boots"))
+                        .apply(LootHelper.setDamage())
+                        .apply(LootHelper.setAttribute(Attributes.STEP_HEIGHT, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(1, 2), EquipmentSlotGroup.FEET))
                 );
 
 
@@ -270,6 +328,11 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setItemName("charged_breeze_rod"))
                         .apply(LootHelper.setEnchantment(Enchantments.KNOCKBACK, 10, lookupEnchantments))
                         .apply(LootHelper.setEnchantment(Enchantments.WIND_BURST, 1, 3, lookupEnchantments))
+                )
+                .add(item(Items.CHAINMAIL_BOOTS)
+                        .apply(LootHelper.setItemName("climbing_boots"))
+                        .apply(LootHelper.setDamage())
+                        .apply(LootHelper.setAttribute(Attributes.STEP_HEIGHT, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(1, 2), EquipmentSlotGroup.FEET))
                 );
 
 
@@ -292,7 +355,8 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 )
                 .add(item(Items.HEAVY_CORE)
                         .apply(LootHelper.setItemName("super_heavy_core"))
-                        .apply(LootHelper.setAttribute(Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(1), EquipmentSlotGroup.HAND))
+                        .apply(LootHelper.setAttribute(Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(1), EquipmentSlotGroup.ANY))
+                        .apply(LootHelper.setAttribute(Attributes.FALL_DAMAGE_MULTIPLIER, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(1.5f), EquipmentSlotGroup.ANY))
                 );
 
 
@@ -304,6 +368,11 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 .add(item(Items.PAPER)
                         .apply(LootHelper.setItemName("note"))
                         .apply(LootHelper.setLore("note_lost"))
+                )
+                .add(item(Items.IRON_PICKAXE)
+                        .apply(LootHelper.setItemName("climbing_axe"))
+                        .apply(LootHelper.setDamage())
+                        .apply(LootHelper.setAttribute(Attributes.STEP_HEIGHT, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(1, 3), EquipmentSlotGroup.HAND))
                 );
 
 
@@ -340,6 +409,10 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 .add(item(Items.PAPER)
                         .apply(LootHelper.setItemName("note"))
                         .apply(LootHelper.setLore("note_idiot"))
+                )
+                .add(item(Items.PAPER)
+                        .apply(LootHelper.setItemName("note"))
+                        .apply(LootHelper.setLore("note_dig_down"))
                 );
 
 
@@ -368,6 +441,38 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 .add(item(Items.PAPER)
                         .apply(LootHelper.setItemName("note"))
                         .apply(LootHelper.setLore("note_idiot"))
+                )
+                .add(item(Items.PAPER)
+                        .apply(LootHelper.setItemName("note"))
+                        .apply(LootHelper.setLore("note_dig_down"))
+                );
+
+
+        builder(BuiltInLootTables.VILLAGE_ARMORER, 0.05).getLootPool()
+                .add(item(Items.IRON_HELMET)
+                        .apply(LootHelper.setItemName("hardened_iron_helmet"))
+                        .apply(LootHelper.setAttribute(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(0.5F), EquipmentSlotGroup.HEAD))
+                        .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.IRON_CHESTPLATE)
+                        .apply(LootHelper.setItemName("hardened_iron_chestplate"))
+                        .apply(LootHelper.setAttribute(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(0.5F), EquipmentSlotGroup.CHEST))
+                        .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.IRON_LEGGINGS)
+                        .apply(LootHelper.setItemName("hardened_iron_leggings"))
+                        .apply(LootHelper.setAttribute(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(0.5F), EquipmentSlotGroup.LEGS))
+                        .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.IRON_BOOTS)
+                        .apply(LootHelper.setItemName("hardened_iron_boots"))
+                        .apply(LootHelper.setAttribute(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(0.5F), EquipmentSlotGroup.FEET))
+                        .apply(LootHelper.setDamage())
+                )
+                .add(item(Items.IRON_HORSE_ARMOR)
+                        .apply(LootHelper.setItemName("hardened_iron_horse_armor"))
+                        .apply(LootHelper.setAttribute(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(0.5F), EquipmentSlotGroup.ARMOR))
+                        .apply(LootHelper.setDamage())
                 );
 
 
@@ -461,6 +566,10 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 .add(item(Items.PAPER)
                         .apply(LootHelper.setItemName("note"))
                         .apply(LootHelper.setLore("note_find_the_orb"))
+                )
+                .add(item(Items.PAPER)
+                        .apply(LootHelper.setItemName("note"))
+                        .apply(LootHelper.setLore("note_dig_down"))
                 );
 
 
@@ -487,6 +596,11 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                 .add(item(Items.PAPER)
                         .apply(LootHelper.setItemName("note"))
                         .apply(LootHelper.setLore("note_vibrations"))
+                )
+                .add(item(Items.ECHO_SHARD)
+                        .apply(LootHelper.setItemName("transmutation_shard"))
+                        .apply(LootHelper.setAttribute(Attributes.SCALE, AttributeModifier.Operation.ADD_VALUE, UniformGenerator.between(0.3F, 1.5F), EquipmentSlotGroup.ANY))
+                        .apply(LootHelper.setGlint(true))
                 );
 
 
