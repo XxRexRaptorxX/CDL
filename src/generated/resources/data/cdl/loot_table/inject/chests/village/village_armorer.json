@@ -15,60 +15,6 @@
           "functions": [
             {
               "function": "minecraft:set_name",
-              "name": "Grumm"
-            }
-          ],
-          "name": "minecraft:name_tag"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "translate": "item.cdl.reinforced_chestplate"
-              },
-              "target": "item_name"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:protection": {
-                  "type": "minecraft:uniform",
-                  "max": 4.0,
-                  "min": 3.0
-                }
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "enchantments": {
-                "minecraft:unbreaking": {
-                  "type": "minecraft:uniform",
-                  "max": 3.0,
-                  "min": 1.0
-                }
-              },
-              "function": "minecraft:set_enchantments"
-            },
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.7,
-                "min": 0.2
-              },
-              "function": "minecraft:set_damage"
-            }
-          ],
-          "name": "minecraft:iron_chestplate"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_name",
               "name": {
                 "translate": "item.cdl.hardened_iron_helmet"
               },
@@ -243,5 +189,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "cdl:inject/chests/simple_dungeon"
+  "random_sequence": "cdl:inject/chests/village/village_armorer"
 }

@@ -150,6 +150,82 @@
             }
           ],
           "name": "minecraft:paper"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "color": "red",
+                "translate": "item.cdl.cursed_crystal"
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": {
+                    "type": "minecraft:uniform",
+                    "max": 15.0,
+                    "min": 1.0
+                  },
+                  "attribute": "minecraft:generic.max_health",
+                  "id": "minecraft:generic.max_health",
+                  "operation": "add_value",
+                  "slot": "any"
+                }
+              ],
+              "replace": false
+            },
+            {
+              "components": {
+                "minecraft:enchantment_glint_override": true
+              },
+              "function": "minecraft:set_components"
+            }
+          ],
+          "name": "minecraft:amethyst_shard"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.climbing_axe"
+              },
+              "target": "item_name"
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.7,
+                "min": 0.2
+              },
+              "function": "minecraft:set_damage"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": {
+                    "type": "minecraft:uniform",
+                    "max": 3.0,
+                    "min": 1.0
+                  },
+                  "attribute": "minecraft:generic.step_height",
+                  "id": "minecraft:generic.step_height",
+                  "operation": "add_value",
+                  "slot": "hand"
+                }
+              ],
+              "replace": false
+            }
+          ],
+          "name": "minecraft:iron_pickaxe"
         }
       ],
       "rolls": 1.0

@@ -38,11 +38,33 @@
               "enchantments": {
                 "minecraft:protection": {
                   "type": "minecraft:uniform",
-                  "max": 4.0,
-                  "min": 3.0
+                  "max": 2.0,
+                  "min": 1.0
                 }
               },
               "function": "minecraft:set_enchantments"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": 0.5,
+                  "attribute": "minecraft:generic.armor_toughness",
+                  "id": "minecraft:generic.armor_toughness",
+                  "operation": "add_value",
+                  "slot": "armor"
+                }
+              ],
+              "replace": false
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.7,
+                "min": 0.2
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "minecraft:golden_horse_armor"
@@ -95,7 +117,6 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "color": "red",
                 "translate": "item.cdl.moon_crystal"
               },
               "target": "item_name"
@@ -112,6 +133,43 @@
                 }
               ],
               "replace": false
+            }
+          ],
+          "name": "minecraft:amethyst_shard"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "color": "red",
+                "translate": "item.cdl.cursed_crystal"
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": {
+                    "type": "minecraft:uniform",
+                    "max": 15.0,
+                    "min": 1.0
+                  },
+                  "attribute": "minecraft:generic.max_health",
+                  "id": "minecraft:generic.max_health",
+                  "operation": "add_value",
+                  "slot": "any"
+                }
+              ],
+              "replace": false
+            },
+            {
+              "components": {
+                "minecraft:enchantment_glint_override": true
+              },
+              "function": "minecraft:set_components"
             }
           ],
           "name": "minecraft:amethyst_shard"

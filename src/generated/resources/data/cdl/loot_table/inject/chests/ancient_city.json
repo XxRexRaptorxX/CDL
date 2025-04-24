@@ -53,6 +53,42 @@
             }
           ],
           "name": "minecraft:paper"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.transmutation_shard"
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": {
+                    "type": "minecraft:uniform",
+                    "max": 1.5,
+                    "min": 0.3
+                  },
+                  "attribute": "minecraft:generic.scale",
+                  "id": "minecraft:generic.scale",
+                  "operation": "add_value",
+                  "slot": "any"
+                }
+              ],
+              "replace": false
+            },
+            {
+              "components": {
+                "minecraft:enchantment_glint_override": true
+              },
+              "function": "minecraft:set_components"
+            }
+          ],
+          "name": "minecraft:echo_shard"
         }
       ],
       "rolls": 1.0

@@ -16,7 +16,6 @@
             {
               "function": "minecraft:set_name",
               "name": {
-                "color": "dark_red",
                 "translate": "item.cdl.frost_walker"
               },
               "target": "item_name"
@@ -62,6 +61,45 @@
             }
           ],
           "name": "minecraft:experience_bottle"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.climbing_axe"
+              },
+              "target": "item_name"
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.7,
+                "min": 0.2
+              },
+              "function": "minecraft:set_damage"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": {
+                    "type": "minecraft:uniform",
+                    "max": 3.0,
+                    "min": 1.0
+                  },
+                  "attribute": "minecraft:generic.step_height",
+                  "id": "minecraft:generic.step_height",
+                  "operation": "add_value",
+                  "slot": "hand"
+                }
+              ],
+              "replace": false
+            }
+          ],
+          "name": "minecraft:iron_pickaxe"
         }
       ],
       "rolls": 1.0

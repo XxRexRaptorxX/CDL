@@ -1,4 +1,4 @@
-// 1.21	2025-04-22T00:04:28.8762991	Global Loot Modifiers : cdl
+// 1.21	2025-04-24T21:57:05.3325566	Global Loot Modifiers : cdl
 b4441a07a7c3c99b33069aaaea2e5117f2318124 data/cdl/loot_modifiers/inject/chests/abandoned_mineshaft.json
 b22412d1ff2e2d6ddb12b54dd0bd80871e231391 data/cdl/loot_modifiers/inject/chests/ancient_city.json
 17d0e1320dac3bc04e5cc4a4fcd3985d430a1c28 data/cdl/loot_modifiers/inject/chests/bastion_hoglin_stable.json
@@ -19,8 +19,9 @@ efd2d5902f1deb08bb8adc4a7244085d2062f38c data/cdl/loot_modifiers/inject/chests/s
 dd249d19eac919c253203645a056d788b2e66b16 data/cdl/loot_modifiers/inject/chests/trial_chambers/reward_ominous.json
 4267e54371dd7cd0e8e0b03db4e3ce8deb1c286b data/cdl/loot_modifiers/inject/chests/trial_chambers/reward_ominous_unique.json
 7fdbd52f50e17b3de3cdb27e5126d9816841d4a8 data/cdl/loot_modifiers/inject/chests/trial_chambers/reward_rare.json
+e1a6a92f95e66df03e0d44104faa467b7071f2d1 data/cdl/loot_modifiers/inject/chests/village/village_armorer.json
 06a2b4baf7c3f5ccfb19f62ee1fe6ec397abb8f8 data/cdl/loot_modifiers/inject/chests/village/village_butcher.json
 f8878761bfaaa3a1a9824fe9d079c48d76e23010 data/cdl/loot_modifiers/inject/chests/village/village_plains_house.json
 e87aa490c858193e23f370baf8248bf50ca5b33c data/cdl/loot_modifiers/inject/chests/village/village_taiga_house.json
 0c34bb0db48109321f47ad12917559c5dcff7fac data/cdl/loot_modifiers/inject/chests/woodland_mansion.json
-f76dbcfbfb95c248ff606b6355a7154ab09b72f6 data/neoforge/loot_modifiers/global_loot_modifiers.json
+1763d5c4656009f2e671f4458d4d41fd8d630f00 data/neoforge/loot_modifiers/global_loot_modifiers.json

@@ -80,6 +80,45 @@
             }
           ],
           "name": "minecraft:iron_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.climbing_boots"
+              },
+              "target": "item_name"
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.7,
+                "min": 0.2
+              },
+              "function": "minecraft:set_damage"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": {
+                    "type": "minecraft:uniform",
+                    "max": 2.0,
+                    "min": 1.0
+                  },
+                  "attribute": "minecraft:generic.step_height",
+                  "id": "minecraft:generic.step_height",
+                  "operation": "add_value",
+                  "slot": "feet"
+                }
+              ],
+              "replace": false
+            }
+          ],
+          "name": "minecraft:chainmail_boots"
         }
       ],
       "rolls": 1.0

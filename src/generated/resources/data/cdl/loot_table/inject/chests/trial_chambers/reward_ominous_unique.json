@@ -135,7 +135,20 @@
                   "attribute": "minecraft:generic.knockback_resistance",
                   "id": "minecraft:generic.knockback_resistance",
                   "operation": "add_value",
-                  "slot": "hand"
+                  "slot": "any"
+                }
+              ],
+              "replace": false
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": 1.5,
+                  "attribute": "minecraft:generic.fall_damage_multiplier",
+                  "id": "minecraft:generic.fall_damage_multiplier",
+                  "operation": "add_value",
+                  "slot": "any"
                 }
               ],
               "replace": false
