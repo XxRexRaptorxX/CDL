@@ -38,7 +38,7 @@ public class ChestLootModifier extends LootModifier {
     @Override
     @SuppressWarnings("deprecation")
     protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-        context.getResolver().get(Registries.LOOT_TABLE, lootTable).map(Holder::value).orElse(LootTable.EMPTY)
+        context.getResolver().get(lootTable).map(Holder::value).orElse(LootTable.EMPTY)
                 .getRandomItemsRaw(context, generatedLoot::add);
         return generatedLoot;
     }

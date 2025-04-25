@@ -10,7 +10,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import xxrexraptorxx.cdl.main.References;
 
 import java.util.ArrayList;
@@ -23,14 +22,14 @@ public class LootTablesGen extends LootTableProvider {
 
     private final List<SubProviderEntry> lootTables = new ArrayList<>();
 
-    private final ExistingFileHelper existingFileHelper;
     private final LootModifiersGen lootModifiers;
+    protected final CompletableFuture<HolderLookup.Provider> lookupProvider;
 
 
-    public LootTablesGen(PackOutput packOutput, ExistingFileHelper existingFileHelper, LootModifiersGen lootModifiers, CompletableFuture<HolderLookup.Provider> registries) {
-        super(packOutput, Set.of(), List.of(), registries);
-        this.existingFileHelper = existingFileHelper;
-        this.lootModifiers = lootModifiers;
+    public LootTablesGen(PackOutput packOutput, Set<ResourceKey<LootTable>> requiredTables, List<SubProviderEntry> subProviders, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(packOutput, Set.of(), List.of(), lookupProvider);
+        this.lootModifiers = subProviders;
+        this.lookupProvider = lookupProvider;
     }
 
     @Override
