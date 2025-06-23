@@ -81,13 +81,21 @@ Use this basic datapack and modify it:
 ## 📷 Presentation
 
 ![loot review](http://i.imgur.com/vsdPkFe.png)
+
 ![loot review](http://i.imgur.com/WuBe645.png)
+
 ![loot review](http://i.imgur.com/OklzRVM.png)
+
 ![loot review](http://i.imgur.com/QCeN5gb.png)
+
 ![loot review](http://i.imgur.com/W3npXYl.png)
+
 ![loot review](http://i.imgur.com/BFaBN6x.png)
+
 ![loot review](http://i.imgur.com/o0mt7Ug.png)
+
 ![loot review](http://i.imgur.com/c5lucz1.png)
+
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uc27Ea33l_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <p align="center">
