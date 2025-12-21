@@ -26,11 +26,13 @@ public class LootTablesGen extends LootTableProvider {
     protected final CompletableFuture<HolderLookup.Provider> lookupProvider;
 
 
-    public LootTablesGen(PackOutput packOutput, Set<ResourceKey<LootTable>> requiredTables, List<SubProviderEntry> subProviders, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+    public LootTablesGen(PackOutput packOutput, Set<ResourceKey<LootTable>> requiredTables, List<SubProviderEntry> subProviders,
+            CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(packOutput, Set.of(), List.of(), lookupProvider);
         this.lootModifiers = subProviders;
         this.lookupProvider = lookupProvider;
     }
+
 
     @Override
     public List<SubProviderEntry> getTables() {
@@ -45,10 +47,14 @@ public class LootTablesGen extends LootTableProvider {
     private void addLootTable(String location, LootTable.Builder lootTable, LootContextParamSet lootParameterSet) {
         if (location.startsWith("inject/")) {
             String actualLocation = location.replace("inject/", "");
-            Preconditions.checkArgument(existingFileHelper.exists(ResourceLocation.parse("loot_table/" + actualLocation + ".json"), PackType.SERVER_DATA), "Loot table %s does not exist in any known data pack", actualLocation);
+            Preconditions.checkArgument(existingFileHelper.exists(ResourceLocation.parse("loot_table/" + actualLocation + ".json"), PackType.SERVER_DATA),
+                    "Loot table %s does not exist in any known data pack", actualLocation);
         }
-        lootTables.add(new SubProviderEntry(registries -> lootBuilder -> lootBuilder.accept(ResourceKey.create(
-                Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(References.MODID, location)), lootTable), lootParameterSet));
+        lootTables
+                .add(new SubProviderEntry(
+                        registries -> lootBuilder -> lootBuilder
+                                .accept(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(References.MODID, location)), lootTable),
+                        lootParameterSet));
     }
 
 }

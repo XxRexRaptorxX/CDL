@@ -73,13 +73,15 @@ public class LootHelper {
     }
 
 
-    public static LootItemFunction.Builder setEnchantment(ResourceKey<Enchantment> enchantment, Integer minLevel, Integer maxLevel, HolderLookup.RegistryLookup<Enchantment> lookup) {
+    public static LootItemFunction.Builder setEnchantment(ResourceKey<Enchantment> enchantment, Integer minLevel, Integer maxLevel,
+            HolderLookup.RegistryLookup<Enchantment> lookup) {
         return new SetEnchantmentsFunction.Builder(false).withEnchantment(lookup.getOrThrow(enchantment), UniformGenerator.between(minLevel, maxLevel));
     }
 
 
     public static LootItemFunction.Builder setAttribute(Holder<Attribute> attribute, AttributeModifier.Operation operation, NumberProvider value, EquipmentSlotGroup slots) {
-        return SetAttributesFunction.setAttributes().withModifier(new SetAttributesFunction.ModifierBuilder(ResourceLocation.parse(attribute.getRegisteredName()), attribute, operation, value).forSlot(slots));
+        return SetAttributesFunction.setAttributes()
+                .withModifier(new SetAttributesFunction.ModifierBuilder(ResourceLocation.parse(attribute.getRegisteredName()), attribute, operation, value).forSlot(slots));
     }
 
 
@@ -88,7 +90,8 @@ public class LootHelper {
     }
 
 
-    public static LootItemFunction.Builder setArmorTrim(ResourceKey<TrimMaterial> material, ResourceKey<TrimPattern> pattern, HolderLookup.RegistryLookup<TrimMaterial> materialLookup, HolderLookup.RegistryLookup<TrimPattern> patternLookup) {
+    public static LootItemFunction.Builder setArmorTrim(ResourceKey<TrimMaterial> material, ResourceKey<TrimPattern> pattern,
+            HolderLookup.RegistryLookup<TrimMaterial> materialLookup, HolderLookup.RegistryLookup<TrimPattern> patternLookup) {
         return SetComponentsFunction.setComponent(DataComponents.TRIM, new ArmorTrim(materialLookup.getOrThrow(material), patternLookup.getOrThrow(pattern), false));
     }
 
@@ -99,12 +102,12 @@ public class LootHelper {
 
 
     public static LootItemFunction.Builder setColor(int red, int blue, int green) {
-        return setColor(red<<16 + green<<8 + blue);
+        return setColor(red << 16 + green << 8 + blue);
     }
 
 
-    //public static LootItemFunction.Builder setFoodEffect(Supplier<MobEffectInstance> effect, float propability) {
-    //    return SetComponentsFunction.setComponent(DataComponents.CONSUMABLE, new Consumable().Builder().effect(effect, propability).build());
-    //}
+    // public static LootItemFunction.Builder setFoodEffect(Supplier<MobEffectInstance> effect, float propability) {
+    // return SetComponentsFunction.setComponent(DataComponents.CONSUMABLE, new Consumable().Builder().effect(effect, propability).build());
+    // }
 
 }

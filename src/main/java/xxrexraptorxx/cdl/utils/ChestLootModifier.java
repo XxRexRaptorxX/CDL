@@ -19,12 +19,8 @@ import java.util.function.Supplier;
 //setblock ~ ~ ~ minecraft:chest{LootTable:"minecraft:chests/stronghold_library"}
 public class ChestLootModifier extends LootModifier {
 
-    public static final Supplier<MapCodec<ChestLootModifier>> CODEC = Suppliers.memoize(
-            () -> RecordCodecBuilder.mapCodec(instance -> codecStart(instance)
-                    .and(ResourceKey.codec(Registries.LOOT_TABLE).fieldOf("loot_table").forGetter(m -> m.lootTable))
-                    .apply(instance, ChestLootModifier::new)
-            )
-    );
+    public static final Supplier<MapCodec<ChestLootModifier>> CODEC = Suppliers.memoize(() -> RecordCodecBuilder.mapCodec(instance -> codecStart(instance)
+            .and(ResourceKey.codec(Registries.LOOT_TABLE).fieldOf("loot_table").forGetter(m -> m.lootTable)).apply(instance, ChestLootModifier::new)));
 
     private final ResourceKey<LootTable> lootTable;
 
@@ -38,8 +34,7 @@ public class ChestLootModifier extends LootModifier {
     @Override
     @SuppressWarnings("deprecation")
     protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-        context.getResolver().get(lootTable).map(Holder::value).orElse(LootTable.EMPTY)
-                .getRandomItemsRaw(context, generatedLoot::add);
+        context.getResolver().get(lootTable).map(Holder::value).orElse(LootTable.EMPTY).getRandomItemsRaw(context, generatedLoot::add);
         return generatedLoot;
     }
 

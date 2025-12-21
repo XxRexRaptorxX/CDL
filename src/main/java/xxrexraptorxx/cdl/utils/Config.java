@@ -34,6 +34,7 @@ public class Config {
         CLIENT_CONFIG = builder.build();
     }
 
+
     public static void initCommon() {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
 

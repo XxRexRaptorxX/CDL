@@ -10,12 +10,16 @@ import xxrexraptorxx.cdl.main.References;
 import xxrexraptorxx.cdl.utils.ChestLootModifier;
 
 public class ModLootModifiers {
-    public static final DeferredRegister<MapCodec<? extends IGlobalLootModifier>> LOOT_MODIFIER_SERIALIZERS = DeferredRegister.create(NeoForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, References.MODID);
+    public static final DeferredRegister<MapCodec<? extends IGlobalLootModifier>> LOOT_MODIFIER_SERIALIZERS = DeferredRegister
+            .create(NeoForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, References.MODID);
 
-    public static void init(IEventBus eventBus) { LOOT_MODIFIER_SERIALIZERS.register(eventBus); }
+    public static void init(IEventBus eventBus) {
+        LOOT_MODIFIER_SERIALIZERS.register(eventBus);
+    }
 
 
-    public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<ChestLootModifier>> LOOT_GEN = LOOT_MODIFIER_SERIALIZERS.register("special_loot_gen", ChestLootModifier.CODEC);
+    public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<ChestLootModifier>> LOOT_GEN = LOOT_MODIFIER_SERIALIZERS.register("special_loot_gen",
+            ChestLootModifier.CODEC);
 
 
     public static void register(IEventBus eventBus) {

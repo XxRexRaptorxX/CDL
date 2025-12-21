@@ -5,7 +5,6 @@
       "rolls": 1.0,
       "bonus_rolls": 0.0,
       "entries": [
-
         {
           "type": "minecraft:item",
           "name": "minecraft:player_head",
@@ -22,8 +21,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_boots",
@@ -59,8 +56,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:bow",
@@ -102,8 +97,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:fishing_rod",
@@ -145,8 +138,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:flint_and_steel",
@@ -181,8 +172,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond_pickaxe",
@@ -224,8 +213,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:carved_pumpkin",
@@ -256,8 +243,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_axe",
@@ -299,8 +284,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:golden_sword",
@@ -330,8 +313,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:name_tag",
@@ -348,8 +329,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:golden_horse_armor",
@@ -372,8 +351,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:jungle_planks",
@@ -393,8 +370,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_chestplate",
@@ -436,8 +411,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_helmet",
@@ -467,8 +440,6 @@
             }
           ]
         },
-
-
         {
           "type": "minecraft:item",
           "name": "minecraft:stick",
@@ -499,9 +470,6 @@
             }
           ]
         }
-
-
-
       ]
     }
   ]
