@@ -26,7 +26,6 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
 import net.minecraft.world.level.storage.loot.functions.SetNameFunction;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
@@ -385,8 +384,6 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
         private final LootPool.Builder lootPool = LootPool.lootPool();
         private final List<LootItemCondition> conditions;
 
-        private LootContextParamSet paramSet = LootContextParamSets.CHEST;
-
         private Builder(String lootTableName) {
             this.lootTableName = "inject/" + lootTableName;
             this.conditions = new ArrayList<>();
@@ -404,11 +401,6 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
         }
 
 
-        public LootContextParamSet getParameterSet() {
-            return paramSet;
-        }
-
-
         public LootPool.Builder getLootPool() {
             return lootPool;
         }
@@ -416,12 +408,6 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
 
         protected String getName() {
             return lootTableName;
-        }
-
-
-        private Builder parameterSet(LootContextParamSet paramSet) {
-            this.paramSet = paramSet;
-            return this;
         }
 
 
