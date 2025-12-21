@@ -58,8 +58,8 @@
               "modifiers": [
                 {
                   "amount": 0.5,
-                  "attribute": "minecraft:generic.armor_toughness",
-                  "id": "minecraft:generic.armor_toughness",
+                  "attribute": "minecraft:armor_toughness",
+                  "id": "minecraft:armor_toughness",
                   "operation": "add_value",
                   "slot": "armor"
                 }

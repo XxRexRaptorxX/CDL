@@ -7,10 +7,13 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.DyedItemColor;
+import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.equipment.trim.ArmorTrim;
 import net.minecraft.world.item.equipment.trim.TrimMaterial;
@@ -20,6 +23,9 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import xxrexraptorxx.cdl.main.References;
+
+import java.util.List;
+import java.util.function.Supplier;
 
 public class LootHelper {
 
@@ -106,8 +112,9 @@ public class LootHelper {
     }
 
 
-    // public static LootItemFunction.Builder setFoodEffect(Supplier<MobEffectInstance> effect, float propability) {
-    // return SetComponentsFunction.setComponent(DataComponents.CONSUMABLE, new Consumable().Builder().effect(effect, propability).build());
-    // }
+    public static LootItemFunction.Builder setFoodEffect(Supplier<MobEffectInstance> effect, float probability) {
+        return SetComponentsFunction.setComponent(DataComponents.CONSUMABLE,
+                Consumable.builder().onConsume(new ApplyStatusEffectsConsumeEffect(List.of(effect.get()), probability)).build());
+    }
 
 }

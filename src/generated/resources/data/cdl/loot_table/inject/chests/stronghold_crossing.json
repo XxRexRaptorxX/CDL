@@ -228,8 +228,8 @@
               "modifiers": [
                 {
                   "amount": 1.0,
-                  "attribute": "minecraft:player.entity_interaction_range",
-                  "id": "minecraft:player.entity_interaction_range",
+                  "attribute": "minecraft:entity_interaction_range",
+                  "id": "minecraft:entity_interaction_range",
                   "operation": "add_value",
                   "slot": "hand"
                 }

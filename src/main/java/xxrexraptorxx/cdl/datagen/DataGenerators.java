@@ -8,19 +8,21 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import xxrexraptorxx.cdl.main.References;
 
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(modid = References.MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = References.MODID)
 public class DataGenerators {
 
     @SubscribeEvent
-    public static void gatherData(GatherDataEvent event) {
+    public static void gatherData(GatherDataEvent.Client event) {
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         LootModifiersGen lootModifiers = new LootModifiersGen(packOutput, lookupProvider);
         generator.addProvider(true, lootModifiers);
-        generator.addProvider(true, new LootTablesGen(packOutput, helper, lootModifiers, lookupProvider));
+
+        generator.addProvider(true, new LootTablesGen(packOutput, Set.of(), lootModifiers, lookupProvider));
     }
 }

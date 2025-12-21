@@ -90,8 +90,8 @@
                     "max": 3.0,
                     "min": 1.0
                   },
-                  "attribute": "minecraft:generic.step_height",
-                  "id": "minecraft:generic.step_height",
+                  "attribute": "minecraft:step_height",
+                  "id": "minecraft:step_height",
                   "operation": "add_value",
                   "slot": "hand"
                 }

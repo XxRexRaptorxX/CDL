@@ -1,4 +1,4 @@
-// 1.21	2025-04-24T21:57:05.3325566	Global Loot Modifiers : cdl
+// 1.21.4	2025-12-21T23:29:41.4625472	Global Loot Modifiers : cdl
 b4441a07a7c3c99b33069aaaea2e5117f2318124 data/cdl/loot_modifiers/inject/chests/abandoned_mineshaft.json
 b22412d1ff2e2d6ddb12b54dd0bd80871e231391 data/cdl/loot_modifiers/inject/chests/ancient_city.json
 17d0e1320dac3bc04e5cc4a4fcd3985d430a1c28 data/cdl/loot_modifiers/inject/chests/bastion_hoglin_stable.json
@@ -24,4 +24,4 @@ e1a6a92f95e66df03e0d44104faa467b7071f2d1 data/cdl/loot_modifiers/inject/chests/v
 f8878761bfaaa3a1a9824fe9d079c48d76e23010 data/cdl/loot_modifiers/inject/chests/village/village_plains_house.json
 e87aa490c858193e23f370baf8248bf50ca5b33c data/cdl/loot_modifiers/inject/chests/village/village_taiga_house.json
 0c34bb0db48109321f47ad12917559c5dcff7fac data/cdl/loot_modifiers/inject/chests/woodland_mansion.json
-1763d5c4656009f2e671f4458d4d41fd8d630f00 data/neoforge/loot_modifiers/global_loot_modifiers.json
+c554ad836cd9db3d82bfae721ed19bc1f7eca69e data/neoforge/loot_modifiers/global_loot_modifiers.json

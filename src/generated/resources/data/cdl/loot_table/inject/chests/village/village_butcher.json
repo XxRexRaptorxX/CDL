@@ -22,23 +22,20 @@
             },
             {
               "components": {
-                "minecraft:food": {
-                  "effects": [
+                "minecraft:consumable": {
+                  "on_consume_effects": [
                     {
-                      "effect": {
-                        "duration": 200,
-                        "id": "minecraft:saturation",
-                        "neoforge:cures": [
-                          "protected_by_totem",
-                          "milk"
-                        ],
-                        "show_icon": true
-                      },
+                      "type": "minecraft:apply_effects",
+                      "effects": [
+                        {
+                          "duration": 200,
+                          "id": "minecraft:saturation",
+                          "show_icon": true
+                        }
+                      ],
                       "probability": 0.9
                     }
-                  ],
-                  "nutrition": 0,
-                  "saturation": 0.0
+                  ]
                 }
               },
               "function": "minecraft:set_components"

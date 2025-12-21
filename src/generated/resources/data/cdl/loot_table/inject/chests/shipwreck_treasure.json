@@ -192,8 +192,8 @@
                     "max": 1.0,
                     "min": 0.2
                   },
-                  "attribute": "minecraft:generic.water_movement_efficiency",
-                  "id": "minecraft:generic.water_movement_efficiency",
+                  "attribute": "minecraft:water_movement_efficiency",
+                  "id": "minecraft:water_movement_efficiency",
                   "operation": "add_value",
                   "slot": "mainhand"
                 }

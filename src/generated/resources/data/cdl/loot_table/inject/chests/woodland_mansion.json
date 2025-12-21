@@ -56,8 +56,8 @@
               "modifiers": [
                 {
                   "amount": -0.03,
-                  "attribute": "minecraft:generic.gravity",
-                  "id": "minecraft:generic.gravity",
+                  "attribute": "minecraft:gravity",
+                  "id": "minecraft:gravity",
                   "operation": "add_value",
                   "slot": "hand"
                 }
@@ -85,25 +85,21 @@
             },
             {
               "components": {
-                "minecraft:food": {
-                  "effects": [
+                "minecraft:consumable": {
+                  "on_consume_effects": [
                     {
-                      "effect": {
-                        "amplifier": 3,
-                        "duration": 200,
-                        "id": "minecraft:poison",
-                        "neoforge:cures": [
-                          "protected_by_totem",
-                          "milk",
-                          "honey"
-                        ],
-                        "show_icon": true
-                      },
+                      "type": "minecraft:apply_effects",
+                      "effects": [
+                        {
+                          "amplifier": 3,
+                          "duration": 200,
+                          "id": "minecraft:poison",
+                          "show_icon": true
+                        }
+                      ],
                       "probability": 0.5
                     }
-                  ],
-                  "nutrition": 0,
-                  "saturation": 0.0
+                  ]
                 }
               },
               "function": "minecraft:set_components"

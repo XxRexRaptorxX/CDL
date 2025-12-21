@@ -5,7 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "chance": 0.05,
+          "chance": 0.1,
           "condition": "minecraft:random_chance"
         }
       ],
@@ -171,8 +171,8 @@
                     "max": 15.0,
                     "min": 1.0
                   },
-                  "attribute": "minecraft:generic.max_health",
-                  "id": "minecraft:generic.max_health",
+                  "attribute": "minecraft:max_health",
+                  "id": "minecraft:max_health",
                   "operation": "add_value",
                   "slot": "any"
                 }
@@ -216,8 +216,8 @@
                     "max": 3.0,
                     "min": 1.0
                   },
-                  "attribute": "minecraft:generic.step_height",
-                  "id": "minecraft:generic.step_height",
+                  "attribute": "minecraft:step_height",
+                  "id": "minecraft:step_height",
                   "operation": "add_value",
                   "slot": "hand"
                 }

@@ -43,7 +43,7 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(modid = References.MODID, bus = EventBusSubscriber.Bus.GAME)
+@EventBusSubscriber(modid = References.MODID)
 public class Events {
 
     /** Update Checker **/

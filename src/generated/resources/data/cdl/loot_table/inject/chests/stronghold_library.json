@@ -25,8 +25,8 @@
               "modifiers": [
                 {
                   "amount": 5.0,
-                  "attribute": "minecraft:generic.luck",
-                  "id": "minecraft:generic.luck",
+                  "attribute": "minecraft:luck",
+                  "id": "minecraft:luck",
                   "operation": "add_value",
                   "slot": "hand"
                 }
@@ -55,8 +55,8 @@
                     "max": 3.0,
                     "min": 1.0
                   },
-                  "attribute": "minecraft:player.entity_interaction_range",
-                  "id": "minecraft:player.entity_interaction_range",
+                  "attribute": "minecraft:entity_interaction_range",
+                  "id": "minecraft:entity_interaction_range",
                   "operation": "add_value",
                   "slot": "hand"
                 }
@@ -91,8 +91,8 @@
                     "max": 3.0,
                     "min": 1.0
                   },
-                  "attribute": "minecraft:player.block_interaction_range",
-                  "id": "minecraft:player.block_interaction_range",
+                  "attribute": "minecraft:block_interaction_range",
+                  "id": "minecraft:block_interaction_range",
                   "operation": "add_value",
                   "slot": "hand"
                 }
@@ -127,8 +127,8 @@
                     "max": 2.0,
                     "min": 1.0
                   },
-                  "attribute": "minecraft:generic.step_height",
-                  "id": "minecraft:generic.step_height",
+                  "attribute": "minecraft:step_height",
+                  "id": "minecraft:step_height",
                   "operation": "add_value",
                   "slot": "hand"
                 }
@@ -163,8 +163,8 @@
                     "max": 0.5,
                     "min": 0.2
                   },
-                  "attribute": "minecraft:player.sneaking_speed",
-                  "id": "minecraft:player.sneaking_speed",
+                  "attribute": "minecraft:sneaking_speed",
+                  "id": "minecraft:sneaking_speed",
                   "operation": "add_value",
                   "slot": "hand"
                 }
@@ -199,8 +199,8 @@
                     "max": 0.8,
                     "min": 0.2
                   },
-                  "attribute": "minecraft:generic.movement_speed",
-                  "id": "minecraft:generic.movement_speed",
+                  "attribute": "minecraft:movement_speed",
+                  "id": "minecraft:movement_speed",
                   "operation": "add_value",
                   "slot": "hand"
                 }
@@ -235,8 +235,8 @@
                     "max": 0.5,
                     "min": 0.2
                   },
-                  "attribute": "minecraft:generic.flying_speed",
-                  "id": "minecraft:generic.flying_speed",
+                  "attribute": "minecraft:flying_speed",
+                  "id": "minecraft:flying_speed",
                   "operation": "add_value",
                   "slot": "hand"
                 }
@@ -271,8 +271,8 @@
                     "max": 0.4,
                     "min": 0.2
                   },
-                  "attribute": "minecraft:generic.jump_strength",
-                  "id": "minecraft:generic.jump_strength",
+                  "attribute": "minecraft:jump_strength",
+                  "id": "minecraft:jump_strength",
                   "operation": "add_value",
                   "slot": "hand"
                 }

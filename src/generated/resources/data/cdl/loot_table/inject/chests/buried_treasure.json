@@ -25,8 +25,8 @@
               "modifiers": [
                 {
                   "amount": 1.0,
-                  "attribute": "minecraft:generic.oxygen_bonus",
-                  "id": "minecraft:generic.oxygen_bonus",
+                  "attribute": "minecraft:oxygen_bonus",
+                  "id": "minecraft:oxygen_bonus",
                   "operation": "add_value",
                   "slot": "hand"
                 }

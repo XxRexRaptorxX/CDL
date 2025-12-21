@@ -73,8 +73,8 @@
                     "max": 1.5,
                     "min": 0.3
                   },
-                  "attribute": "minecraft:generic.scale",
-                  "id": "minecraft:generic.scale",
+                  "attribute": "minecraft:scale",
+                  "id": "minecraft:scale",
                   "operation": "add_value",
                   "slot": "any"
                 }
