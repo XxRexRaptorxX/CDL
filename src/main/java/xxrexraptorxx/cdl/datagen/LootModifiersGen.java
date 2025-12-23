@@ -285,8 +285,7 @@ public class LootModifiersGen extends GlobalLootModifierProvider {
                         .apply(LootHelper.setAttribute(Attributes.ENTITY_INTERACTION_RANGE, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(1),
                                 EquipmentSlotGroup.HAND)))
                 .add(item(Items.EXPERIENCE_BOTTLE).apply(LootHelper.setItemName("life_essence", ChatFormatting.RED)).apply(LootHelper.setCount(1, 3)))
-                .add(item(Items.BEDROCK).apply(LootHelper.setLore("bedrock")))
-                .add(item(Items.ENDER_EYE).apply(LootHelper.setItemName("all_seeing_ender_eye"))
+                .add(item(Items.BEDROCK).apply(LootHelper.setLore("bedrock"))).add(item(Items.ENDER_EYE).apply(LootHelper.setItemName("all_seeing_ender_eye"))
                         .apply(LootHelper.setAttribute(Attributes.CAMERA_DISTANCE, AttributeModifier.Operation.ADD_VALUE, ConstantValue.exactly(4), EquipmentSlotGroup.HAND)));
 
 
