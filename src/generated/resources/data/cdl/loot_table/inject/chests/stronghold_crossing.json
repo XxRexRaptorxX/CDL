@@ -171,8 +171,7 @@
               "components": {
                 "minecraft:trim": {
                   "material": "minecraft:netherite",
-                  "pattern": "minecraft:silence",
-                  "show_in_tooltip": false
+                  "pattern": "minecraft:silence"
                 }
               },
               "function": "minecraft:set_components"

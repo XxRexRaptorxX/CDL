@@ -4,7 +4,6 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -36,7 +35,7 @@ public class LootHelper {
 
 
     public static LootItemFunction.Builder setItemName(String name, ChatFormatting formatting) {
-        return SetNameFunction.setName(Component.translatable("item." + References.MODID + "." + name).withStyle(formatting), SetNameFunction.Target.ITEM_NAME);
+        return SetNameFunction.setName(FormattingHelper.setModLangComponent("item", References.MODID, name).withStyle(formatting), SetNameFunction.Target.ITEM_NAME);
     }
 
 
@@ -99,12 +98,12 @@ public class LootHelper {
 
     public static LootItemFunction.Builder setArmorTrim(ResourceKey<TrimMaterial> material, ResourceKey<TrimPattern> pattern,
             HolderLookup.RegistryLookup<TrimMaterial> materialLookup, HolderLookup.RegistryLookup<TrimPattern> patternLookup) {
-        return SetComponentsFunction.setComponent(DataComponents.TRIM, new ArmorTrim(materialLookup.getOrThrow(material), patternLookup.getOrThrow(pattern), false));
+        return SetComponentsFunction.setComponent(DataComponents.TRIM, new ArmorTrim(materialLookup.getOrThrow(material), patternLookup.getOrThrow(pattern)));
     }
 
 
     public static LootItemFunction.Builder setColor(int rgb) {
-        return SetComponentsFunction.setComponent(DataComponents.DYED_COLOR, new DyedItemColor(rgb, false));
+        return SetComponentsFunction.setComponent(DataComponents.DYED_COLOR, new DyedItemColor(rgb));
     }
 
 

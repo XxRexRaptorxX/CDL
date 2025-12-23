@@ -48,10 +48,7 @@
             },
             {
               "components": {
-                "minecraft:dyed_color": {
-                  "rgb": 16773632,
-                  "show_in_tooltip": false
-                }
+                "minecraft:dyed_color": 16773632
               },
               "function": "minecraft:set_components"
             },
@@ -59,8 +56,7 @@
               "components": {
                 "minecraft:trim": {
                   "material": "minecraft:redstone",
-                  "pattern": "minecraft:tide",
-                  "show_in_tooltip": false
+                  "pattern": "minecraft:tide"
                 }
               },
               "function": "minecraft:set_components"
