@@ -105,7 +105,7 @@ Use this basic datapack and modify it:
 ## 🗃️ Dependencies
 
 ### Required:
-- **Magma Core**
+- **Magma Core** [≥ MC 1.21.5]
     - Provides basic code and features such as update-checker
     - [CurseForge][cf_magmacore] | [Modrinth][mr_magmacore]
   
