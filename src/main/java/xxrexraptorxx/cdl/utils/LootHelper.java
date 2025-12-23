@@ -23,6 +23,7 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import xxrexraptorxx.cdl.main.References;
+import xxrexraptorxx.magmacore.utils.FormattingHelper;
 
 import java.util.List;
 import java.util.function.Supplier;
@@ -30,7 +31,7 @@ import java.util.function.Supplier;
 public class LootHelper {
 
     public static LootItemFunction.Builder setItemName(String name) {
-        return SetNameFunction.setName(Component.translatable("item." + References.MODID + "." + name), SetNameFunction.Target.ITEM_NAME);
+        return SetNameFunction.setName(FormattingHelper.setModLangComponent("item", References.MODID, name), SetNameFunction.Target.ITEM_NAME);
     }
 
 
@@ -40,7 +41,7 @@ public class LootHelper {
 
 
     public static LootItemFunction.Builder setLore(String name) {
-        return new SetLoreFunction.Builder().addLine(Component.translatable("lore." + References.MODID + "." + name));
+        return new SetLoreFunction.Builder().addLine(FormattingHelper.setModLangComponent("lore", References.MODID, name));
     }
 
 
@@ -55,7 +56,7 @@ public class LootHelper {
 
 
     public static LootItemFunction.Builder setLore(String name, ChatFormatting formatting) {
-        return new SetLoreFunction.Builder().addLine(Component.translatable("lore." + References.MODID + "." + name).withStyle(formatting));
+        return new SetLoreFunction.Builder().addLine(FormattingHelper.setModLangComponent("lore", References.MODID, name, formatting));
     }
 
 
