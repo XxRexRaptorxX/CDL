@@ -3,7 +3,7 @@
 // ========================================
 
 tasks.named('jar').configure {
-    archiveBaseName.set(mod_name.replace(" ", ""))
+    archiveBaseName.set(mod_id.toUpperCase().replace(" ", ""))
     archiveVersion.set("${minecraft_version}-(v.${mod_version}-${mod_loader})")
 }
 
