@@ -102,6 +102,17 @@ Use this basic datapack and modify it:
   <img src="https://github.com/XxRexRaptorxX/General/blob/main/page_decorations/line.png?raw=true" alt="line" width="2000"/>
 </p>
 
+## 🗃️ Dependencies
+
+### Required:
+- **Magma Core**
+    - Provides basic code and features such as update-checker
+    - [CurseForge][cf_magmacore] | [Modrinth][mr_magmacore]
+  
+<p align="center">
+  <img src="https://github.com/XxRexRaptorxX/General/blob/main/page_decorations/line.png?raw=true" alt="line" width="2000"/>
+</p>
+
 ## 🎮 My other mods!
 
 <p align="center">
