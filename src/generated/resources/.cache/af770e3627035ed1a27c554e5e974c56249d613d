@@ -1,4 +1,4 @@
-// 1.21.5	2025-12-23T20:30:54.6042598	Global Loot Modifiers : cdl
+// 1.21.10	2025-12-23T21:19:19.6266552	Global Loot Modifiers : cdl
 b4441a07a7c3c99b33069aaaea2e5117f2318124 data/cdl/loot_modifiers/inject/chests/abandoned_mineshaft.json
 b22412d1ff2e2d6ddb12b54dd0bd80871e231391 data/cdl/loot_modifiers/inject/chests/ancient_city.json
 17d0e1320dac3bc04e5cc4a4fcd3985d430a1c28 data/cdl/loot_modifiers/inject/chests/bastion_hoglin_stable.json

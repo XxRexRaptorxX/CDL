@@ -1,4 +1,4 @@
-// 1.21.5	2025-12-23T20:30:54.6022649	Loot Tables
+// 1.21.10	2025-12-23T21:19:19.6236633	Loot Tables
 9db3d7b42a7410dc8c0234dec58def06cf4357b6 data/cdl/loot_table/inject/chests/abandoned_mineshaft.json
 2a5da6a8eb6044fb577307c70d4456715027646d data/cdl/loot_table/inject/chests/ancient_city.json
 30dd2db4705a0612c55dc46e5c8cc58289ec579b data/cdl/loot_table/inject/chests/bastion_hoglin_stable.json
@@ -14,7 +14,7 @@ e27e1964a6e4183e4f239cb251e49e149180a1f7 data/cdl/loot_table/inject/chests/nethe
 1c1bfd2e5af6fc78ed0c07c9ce4e29141915814f data/cdl/loot_table/inject/chests/shipwreck_treasure.json
 508522bd86794f93a4e5acad7e91eaa03998e08e data/cdl/loot_table/inject/chests/simple_dungeon.json
 ac45d6f538be41cab6171f73b3720ba94109b9f3 data/cdl/loot_table/inject/chests/spawn_bonus_chest.json
-6dcaa272ead8f1a2d6801ee6f2fe9482eb5249c8 data/cdl/loot_table/inject/chests/stronghold_crossing.json
+ad9f917260a981c22df63fef6ad61bcd64893791 data/cdl/loot_table/inject/chests/stronghold_crossing.json
 429369421bf539a382fc674f91cb4e1ca5987c87 data/cdl/loot_table/inject/chests/stronghold_library.json
 e8695b7cf44e0d9cf2ae96eeaf318c0c9d615035 data/cdl/loot_table/inject/chests/trial_chambers/reward_ominous.json
 02a269c497950c800911c4fc5e864626e32215cb data/cdl/loot_table/inject/chests/trial_chambers/reward_ominous_unique.json

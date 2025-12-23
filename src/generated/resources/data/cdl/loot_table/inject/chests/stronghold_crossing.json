@@ -275,6 +275,32 @@
             }
           ],
           "name": "minecraft:bedrock"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.cdl.all_seeing_ender_eye"
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "amount": 4.0,
+                  "attribute": "minecraft:camera_distance",
+                  "id": "minecraft:camera_distance",
+                  "operation": "add_value",
+                  "slot": "hand"
+                }
+              ],
+              "replace": false
+            }
+          ],
+          "name": "minecraft:ender_eye"
         }
       ],
       "rolls": 1.0
